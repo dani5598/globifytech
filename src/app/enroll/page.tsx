@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import type { Metadata } from "next";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { SectionTag } from "@/components/ui/section-heading";
@@ -17,14 +18,7 @@ const CONTACT_DETAILS = [
   { icon: MapPin, label: "San Francisco · London · Remote" },
 ];
 
-export default async function EnrollPage({
-  searchParams,
-}: {
-  searchParams: Promise<{ course?: string }>;
-}) {
-  const { course } = await searchParams;
-  const initialSlug = programs.some((p) => p.slug === course) ? course : undefined;
-
+export default function EnrollPage() {
   return (
     <div className="mx-auto max-w-6xl px-6 pb-28 lg:px-10">
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-[0.9fr_1.1fr]">
@@ -65,7 +59,9 @@ export default async function EnrollPage({
         </div>
 
         <Reveal delay={0.1}>
-          <EnrollForm programs={programs} initialSlug={initialSlug} />
+          <Suspense fallback={<div className="flex h-64 items-center justify-center text-[#A0AEC0]">Loading form...</div>}>
+            <EnrollForm programs={programs} />
+          </Suspense>
         </Reveal>
       </div>
     </div>

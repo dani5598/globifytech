@@ -2,6 +2,7 @@
 
 import { useState, type FormEvent } from "react";
 import { CheckCircle2 } from "lucide-react";
+import { useSearchParams } from "next/navigation";
 import { GlassCard } from "@/components/ui/glass-card";
 import { LiquidGlassButton } from "@/components/ui/liquid-glass-button";
 import type { programs } from "@/data/content";
@@ -10,12 +11,13 @@ type Program = (typeof programs)[number];
 
 export function EnrollForm({
   programs,
-  initialSlug,
 }: {
   programs: readonly Program[];
-  initialSlug?: string;
 }) {
   const [submitted, setSubmitted] = useState(false);
+  const searchParams = useSearchParams();
+  const courseParam = searchParams.get("course");
+  const initialSlug = courseParam && programs.some((p) => p.slug === courseParam) ? courseParam : undefined;
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
