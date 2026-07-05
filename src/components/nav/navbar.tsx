@@ -82,10 +82,11 @@ export function Navbar() {
         initial={{ y: -48, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+        style={{ background: scrolled ? "rgba(25,5,32,0.82)" : "rgba(25,5,32,0.55)" }}
         className={cn(
           "glass relative flex w-[93%] max-w-[1500px] items-center justify-between rounded-[20px] px-4 transition-[height,padding,box-shadow,background-color,backdrop-filter] duration-400 ease-out sm:px-6",
           scrolled
-            ? "h-[64px] shadow-[0_20px_60px_-12px_rgba(15,23,42,0.25)] [backdrop-filter:blur(28px)] [background:var(--glass-bg-scrolled)]"
+            ? "h-[64px] shadow-[0_20px_60px_-12px_rgba(15,23,42,0.25)] [backdrop-filter:blur(28px)]"
             : "h-[78px]"
         )}
       >
@@ -118,7 +119,7 @@ export function Navbar() {
                     {item.label}
                     <span
                       className={cn(
-                        "absolute inset-x-3.5 -bottom-0.5 h-px origin-left bg-gradient-to-r from-[#4DA9FF] to-[#7FD3FF] transition-transform duration-300",
+                        "absolute inset-x-3.5 -bottom-0.5 h-px origin-left bg-gradient-to-r from-[#009DFF] to-[#7FD3FF] transition-transform duration-300",
                         active ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
                       )}
                     />
@@ -157,7 +158,7 @@ export function Navbar() {
                   />
                   <span
                     className={cn(
-                      "absolute inset-x-3.5 -bottom-0.5 h-px origin-left bg-gradient-to-r from-[#4DA9FF] to-[#7FD3FF] transition-transform duration-300",
+                      "absolute inset-x-3.5 -bottom-0.5 h-px origin-left bg-gradient-to-r from-[#009DFF] to-[#7FD3FF] transition-transform duration-300",
                       open ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
                     )}
                   />

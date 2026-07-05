@@ -17,7 +17,7 @@ export function Instructors() {
           {instructors.map((instructor, i) => (
             <Reveal key={instructor.name} delay={i * 0.07}>
               <GlassCard className="flex h-full flex-col items-center p-7 text-center">
-                <div className="relative flex h-20 w-20 items-center justify-center rounded-full border border-white/10 bg-gradient-to-br from-[#185FA5]/30 via-[#0D1117] to-transparent font-heading text-xl font-semibold text-[#7FD3FF]">
+                <div className="relative flex h-20 w-20 items-center justify-center rounded-full border border-white/10 bg-gradient-to-br from-[#009DFF]/30 via-[#0D1117] to-transparent font-heading text-xl font-semibold text-[#7FD3FF]">
                   {instructor.name
                     .split(" ")
                     .filter((w) => !w.endsWith("."))
@@ -29,7 +29,7 @@ export function Instructors() {
                 <h3 className="mt-5 font-heading text-base font-medium text-white">
                   {instructor.name}
                 </h3>
-                <p className="mt-1 text-xs font-medium uppercase tracking-wide text-[#4DA9FF]">
+                <p className="mt-1 text-xs font-medium uppercase tracking-wide text-[#009DFF]">
                   {instructor.role}
                 </p>
                 <p className="mt-3 text-sm leading-relaxed text-[#A0AEC0]">

@@ -28,7 +28,7 @@ export function EnrollForm({
     <GlassCard className="p-8 sm:p-10">
       {submitted ? (
         <div className="flex min-h-[420px] flex-col items-center justify-center gap-3 text-center">
-          <div className="flex h-14 w-14 items-center justify-center rounded-full border border-white/10 bg-[#185FA5]/20 text-[#7FD3FF]">
+          <div className="flex h-14 w-14 items-center justify-center rounded-full border border-white/10 bg-[#009DFF]/20 text-[#7FD3FF]">
             <CheckCircle2 size={22} />
           </div>
           <h3 className="font-heading text-xl font-medium text-white">
@@ -68,7 +68,7 @@ export function EnrollForm({
               name="program"
               required
               defaultValue={initialSlug ?? ""}
-              className="w-full rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 text-sm text-white outline-none transition-colors focus:border-[#4DA9FF]/50"
+              className="w-full rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 text-sm text-white outline-none transition-colors focus:border-[#009DFF]/50"
             >
               <option value="" disabled>
                 Select a program
@@ -92,7 +92,7 @@ export function EnrollForm({
               name="message"
               rows={4}
               placeholder="Anything we should know about your goals or schedule?"
-              className="w-full resize-none rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 text-sm text-white placeholder:text-white/25 outline-none transition-colors focus:border-[#4DA9FF]/50"
+              className="w-full resize-none rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 text-sm text-white placeholder:text-white/25 outline-none transition-colors focus:border-[#009DFF]/50"
             />
           </div>
           <LiquidGlassButton as="button" type="submit" className="mt-2 w-full justify-center">
@@ -129,7 +129,7 @@ function Field({
         type={type}
         required
         placeholder={placeholder}
-        className="w-full rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 text-sm text-white placeholder:text-white/25 outline-none transition-colors focus:border-[#4DA9FF]/50"
+        className="w-full rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 text-sm text-white placeholder:text-white/25 outline-none transition-colors focus:border-[#009DFF]/50"
       />
     </div>
   );

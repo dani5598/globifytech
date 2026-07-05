@@ -14,7 +14,7 @@ import {
 import * as THREE from "three";
 
 const CYAN = "#00E5FF";
-const ROYAL = "#4DA9FF";
+const ROYAL = "#009DFF";
 const VIOLET = "#7C3AED";
 const NAVY = "#0B1120";
 const ICE = "#BFE9FF";

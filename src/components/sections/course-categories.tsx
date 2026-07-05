@@ -40,7 +40,7 @@ export function CourseCategories() {
                   data-cursor-hover
                   className="group flex flex-col items-center gap-3 bg-[color:var(--surface)] px-6 py-9 text-center transition-colors hover:bg-[color:var(--surface-hover)]"
                 >
-                  <span className="flex h-12 w-12 items-center justify-center rounded-2xl border border-[color:var(--border)] bg-gradient-to-br from-[#185FA5]/25 to-transparent text-[#7FD3FF] transition-transform duration-300 group-hover:scale-110">
+                  <span className="flex h-12 w-12 items-center justify-center rounded-2xl border border-[color:var(--border)] bg-gradient-to-br from-[#009DFF]/25 to-transparent text-[#7FD3FF] transition-transform duration-300 group-hover:scale-110">
                     <Icon size={20} />
                   </span>
                   <span className="font-heading text-sm font-medium text-[color:var(--fg)]">

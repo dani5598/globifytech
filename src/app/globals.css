@@ -5,14 +5,17 @@
   --font-body: "Times New Roman", Times, serif;
 
   --color-bg: var(--bg);
-  --color-primary: #185fa5;
-  --color-accent: #2563eb;
+  --color-primary: #009DFF;
+  --color-accent: #009DFF;
   --color-graphite: #444441;
   --color-card: var(--surface);
   --color-border: var(--border);
   --color-muted: var(--muted);
-  --color-glow: #4da9ff;
+  --color-glow: #009DFF;
   --color-highlight: #7fd3ff;
+  --color-magenta: #ff0ae0;
+  --color-plum: #452054;
+  --color-header: #190520;
 
   --animate-float: float 8s ease-in-out infinite;
   --animate-float-slow: float 14s ease-in-out infinite;
@@ -49,7 +52,7 @@
 }
 
 :root {
-  --bg: #05060a;
+  --bg: #190520;
   --surface: #0d1117;
   --surface-soft: rgba(255, 255, 255, 0.03);
   --surface-hover: rgba(255, 255, 255, 0.06);
@@ -62,8 +65,8 @@
   --glass-bg-scrolled: rgba(13, 17, 23, 0.78);
   --glass-border: rgba(255, 255, 255, 0.08);
   --surface-backdrop: hsl(220 30% 8% / 0.55);
-  --scrollbar-track: #05060a;
-  --scrollbar-thumb: #14213a;
+  --scrollbar-track: #190520;
+  --scrollbar-thumb: #452054;
   color-scheme: dark;
 }
 
@@ -99,7 +102,7 @@ body {
 }
 
 ::selection {
-  background: rgba(24, 95, 165, 0.4);
+  background: rgba(0,157,255, 0.4);
   color: #fff;
 }
 
@@ -114,7 +117,7 @@ body {
   border-radius: 999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #185fa5;
+  background: #009DFF;
 }
 
 /* Glass panel utility */
@@ -139,7 +142,7 @@ body {
 }
 
 .text-gradient-blue {
-  background: linear-gradient(90deg, #7fd3ff 0%, #4da9ff 50%, #185fa5 100%);
+  background: linear-gradient(90deg, #7fd3ff 0%, #33c0ff 48%, #009DFF 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -161,10 +164,10 @@ body {
 
 /* Theme-aware page gradient behind the particle canvas */
 .page-gradient {
-  background: linear-gradient(to bottom, #05060a, #0a1628, #05060a);
+  background: linear-gradient(to bottom, #190520, #2a0b3d, #190520);
 }
 :root.light .page-gradient {
-  background: linear-gradient(to bottom, #f8fafc, #e6effa, #f8fafc);
+  background: linear-gradient(to bottom, #faf7fc, #f4e9fb, #faf7fc);
 }
 :root.light .grid-overlay {
   background-image: linear-gradient(
@@ -244,6 +247,126 @@ body {
 [data-glow] > [data-glow]::before {
   inset: -10px;
   border-width: 10px;
+}
+
+/* ============================================================
+   Student Dashboard utilities
+   ============================================================ */
+
+/* Animated conic gradient border ring (uses @property for smooth spin) */
+@property --dash-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+@keyframes dash-border-spin {
+  to {
+    --dash-angle: 360deg;
+  }
+}
+@keyframes dash-orbit {
+  from {
+    transform: rotate(0deg) translateX(var(--orbit-r, 120px)) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(var(--orbit-r, 120px)) rotate(-360deg);
+  }
+}
+@keyframes dash-shimmer {
+  from {
+    transform: translateX(-120%);
+  }
+  to {
+    transform: translateX(220%);
+  }
+}
+@keyframes dash-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+@keyframes dash-pulse-ring {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.7;
+  }
+  70% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Animated gradient border — put on a rounded element, sits above the fill */
+.dash-animated-border {
+  position: relative;
+}
+.dash-animated-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: conic-gradient(
+    from var(--dash-angle),
+    transparent 0deg,
+    #009dff 70deg,
+    #7fd3ff 140deg,
+    #ff0ae0 220deg,
+    #452054 300deg,
+    transparent 360deg
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation: dash-border-spin 6s linear infinite;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Thin custom scrollbar for inner scroll regions (chat, kanban, lists) */
+.dash-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb) transparent;
+}
+.dash-scroll::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.dash-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.dash-scroll::-webkit-scrollbar-thumb {
+  background: rgba(0, 157, 255, 0.35);
+  border-radius: 999px;
+}
+
+/* Brand text gradient (blue → magenta) */
+.text-gradient-brand {
+  background: linear-gradient(100deg, #7fd3ff 0%, #009dff 42%, #ff0ae0 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Radial dashboard backdrop glow */
+.dash-backdrop {
+  background:
+    radial-gradient(60% 55% at 15% 0%, rgba(0, 157, 255, 0.14), transparent 60%),
+    radial-gradient(50% 50% at 100% 10%, rgba(255, 10, 224, 0.1), transparent 60%),
+    radial-gradient(70% 60% at 50% 100%, rgba(69, 32, 84, 0.35), transparent 70%);
+}
+:root.light .dash-backdrop {
+  background:
+    radial-gradient(60% 55% at 15% 0%, rgba(0, 157, 255, 0.12), transparent 60%),
+    radial-gradient(50% 50% at 100% 10%, rgba(255, 10, 224, 0.06), transparent 60%),
+    radial-gradient(70% 60% at 50% 100%, rgba(124, 58, 237, 0.08), transparent 70%);
 }
 
 @media (prefers-reduced-motion: reduce) {

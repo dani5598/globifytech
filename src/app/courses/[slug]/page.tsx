@@ -94,22 +94,22 @@ export default async function CourseDetailPage({
             sizes="(min-width: 1024px) 960px, 100vw"
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#05060A] via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#050816] via-transparent to-transparent" />
         </div>
       </Reveal>
 
       <Reveal delay={0.24}>
         <div className="mt-6 flex flex-wrap items-center gap-x-8 gap-y-3 border-y border-white/[0.06] py-6 text-sm text-[#A0AEC0]">
           <span className="flex items-center gap-2">
-            <Signal size={15} className="text-[#4DA9FF]" />
+            <Signal size={15} className="text-[#009DFF]" />
             {program.difficulty}
           </span>
           <span className="flex items-center gap-2">
-            <Clock size={15} className="text-[#4DA9FF]" />
+            <Clock size={15} className="text-[#009DFF]" />
             {program.duration}
           </span>
           <span className="flex items-center gap-2">
-            <UserRound size={15} className="text-[#4DA9FF]" />
+            <UserRound size={15} className="text-[#009DFF]" />
             Led by {program.instructor}
           </span>
         </div>
@@ -126,7 +126,7 @@ export default async function CourseDetailPage({
             {program.curriculum.map((item, i) => (
               <Reveal key={item} delay={Math.min(i * 0.04, 0.4)}>
                 <div className="flex items-start gap-3 rounded-xl border border-white/[0.06] bg-white/[0.02] px-4 py-3 text-sm text-[#A0AEC0]">
-                  <CheckCircle2 size={16} className="mt-0.5 shrink-0 text-[#4DA9FF]" />
+                  <CheckCircle2 size={16} className="mt-0.5 shrink-0 text-[#009DFF]" />
                   <span>{item}</span>
                 </div>
               </Reveal>

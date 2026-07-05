@@ -52,7 +52,7 @@ export function MegaMenu({ onNavigate }: { onNavigate?: () => void }) {
               data-cursor-hover
               className="group flex h-full items-start gap-3 rounded-2xl p-3.5 transition-colors duration-200 hover:bg-[color:var(--surface-soft)]"
             >
-              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-[color:var(--border)] bg-gradient-to-br from-[#185FA5]/20 to-[#2563EB]/10 text-[#4DA9FF] transition-transform duration-300 group-hover:scale-110 group-hover:text-[#7FD3FF]">
+              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-[color:var(--border)] bg-gradient-to-br from-[#009DFF]/20 to-[#009DFF]/10 text-[#009DFF] transition-transform duration-300 group-hover:scale-110 group-hover:text-[#7FD3FF]">
                 <item.icon size={18} />
               </span>
               <span className="flex flex-col gap-0.5">
@@ -77,7 +77,7 @@ export function MegaMenu({ onNavigate }: { onNavigate?: () => void }) {
           href="/courses"
           onClick={onNavigate}
           data-cursor-hover
-          className="group flex items-center justify-between rounded-2xl bg-gradient-to-r from-[#185FA5]/15 to-[#2563EB]/10 px-4 py-3 transition-colors hover:from-[#185FA5]/25 hover:to-[#2563EB]/20"
+          className="group flex items-center justify-between rounded-2xl bg-gradient-to-r from-[#009DFF]/15 to-[#009DFF]/10 px-4 py-3 transition-colors hover:from-[#009DFF]/25 hover:to-[#009DFF]/20"
         >
           <span className="flex items-center gap-2 text-sm font-medium text-[color:var(--fg)]">
             <GraduationCap size={16} className="text-[#7FD3FF]" />

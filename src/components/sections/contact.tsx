@@ -41,7 +41,7 @@ export function Contact() {
                     key={detail.label}
                     className="flex items-center gap-3 text-sm text-[color:var(--muted)]"
                   >
-                    <span className="flex h-9 w-9 items-center justify-center rounded-xl border border-[color:var(--border)] bg-[color:var(--surface-soft)] text-[#4DA9FF]">
+                    <span className="flex h-9 w-9 items-center justify-center rounded-xl border border-[color:var(--border)] bg-[color:var(--surface-soft)] text-[#009DFF]">
                       <detail.icon size={16} />
                     </span>
                     {detail.label}
@@ -55,7 +55,7 @@ export function Contact() {
             <GlassCard className="p-8 sm:p-10">
               {submitted ? (
                 <div className="flex min-h-[360px] flex-col items-center justify-center gap-3 text-center">
-                  <div className="flex h-14 w-14 items-center justify-center rounded-full border border-[color:var(--border)] bg-[#185FA5]/20 text-[#7FD3FF]">
+                  <div className="flex h-14 w-14 items-center justify-center rounded-full border border-[color:var(--border)] bg-[#009DFF]/20 text-[#7FD3FF]">
                     <Mail size={22} />
                   </div>
                   <h3 className="font-heading text-xl font-medium text-[color:var(--fg)]">
@@ -88,7 +88,7 @@ export function Contact() {
                       id="program"
                       name="program"
                       required
-                      className="w-full rounded-xl border border-[color:var(--border)] bg-[color:var(--surface-soft)] px-4 py-3 text-sm text-white outline-none transition-colors focus:border-[#4DA9FF]/50"
+                      className="w-full rounded-xl border border-[color:var(--border)] bg-[color:var(--surface-soft)] px-4 py-3 text-sm text-white outline-none transition-colors focus:border-[#009DFF]/50"
                       defaultValue=""
                     >
                       <option value="" disabled>
@@ -113,7 +113,7 @@ export function Contact() {
                       name="message"
                       rows={4}
                       placeholder="What are you hoping to build or achieve?"
-                      className="w-full resize-none rounded-xl border border-[color:var(--border)] bg-[color:var(--surface-soft)] px-4 py-3 text-sm text-[color:var(--fg)] placeholder:text-[color:var(--muted)] outline-none transition-colors focus:border-[#4DA9FF]/50"
+                      className="w-full resize-none rounded-xl border border-[color:var(--border)] bg-[color:var(--surface-soft)] px-4 py-3 text-sm text-[color:var(--fg)] placeholder:text-[color:var(--muted)] outline-none transition-colors focus:border-[#009DFF]/50"
                     />
                   </div>
                   <LiquidGlassButton
@@ -158,7 +158,7 @@ function Field({
         type={type}
         required
         placeholder={placeholder}
-        className="w-full rounded-xl border border-[color:var(--border)] bg-[color:var(--surface-soft)] px-4 py-3 text-sm text-[color:var(--fg)] placeholder:text-[color:var(--muted)] outline-none transition-colors focus:border-[#4DA9FF]/50"
+        className="w-full rounded-xl border border-[color:var(--border)] bg-[color:var(--surface-soft)] px-4 py-3 text-sm text-[color:var(--fg)] placeholder:text-[color:var(--muted)] outline-none transition-colors focus:border-[#009DFF]/50"
       />
     </div>
   );

@@ -46,7 +46,7 @@ export function LearningExperience() {
             {FEATURES.map((feature, i) => (
               <Reveal key={feature.title} delay={i * 0.08}>
                 <GlassCard className="h-full p-6">
-                  <feature.icon size={22} className="text-[#4DA9FF]" />
+                  <feature.icon size={22} className="text-[#009DFF]" />
                   <h3 className="mt-5 font-heading text-lg font-medium text-white">
                     {feature.title}
                   </h3>

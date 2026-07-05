@@ -46,7 +46,7 @@ export function AiLabs() {
                     key={point.label}
                     className="flex items-center gap-3 text-sm text-[color:var(--muted)]"
                   >
-                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-[color:var(--border)] bg-[color:var(--surface-soft)] text-[#4DA9FF]">
+                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-[color:var(--border)] bg-[color:var(--surface-soft)] text-[#009DFF]">
                       <point.icon size={16} />
                     </span>
                     {point.label}
@@ -58,7 +58,7 @@ export function AiLabs() {
 
           <div className="relative h-[320px] lg:h-auto">
             <div className="absolute inset-0 bg-gradient-to-r from-[color:var(--bg)] via-transparent to-transparent lg:block" />
-            <div className="absolute inset-0 rounded-full bg-[#185FA5]/10 blur-[100px]" />
+            <div className="absolute inset-0 rounded-full bg-[#009DFF]/10 blur-[100px]" />
             <DataCubesScene />
           </div>
         </div>

@@ -10,8 +10,8 @@ declare global {
 }
 
 const PARTICLE_COLORS = {
-  particles: "#4DA9FF",
-  lines: "#185FA5",
+  particles: "#009DFF",
+  lines: "#009DFF",
   accent: "#7FD3FF",
 };
 

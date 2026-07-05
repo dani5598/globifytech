@@ -37,7 +37,7 @@ function createBeam(width: number, height: number): Beam {
     angle,
     speed: 0.6 + Math.random() * 1.2,
     opacity: 0.12 + Math.random() * 0.16,
-    hue: 190 + Math.random() * 70,
+    hue: 200 + Math.random() * 110,
     pulse: Math.random() * Math.PI * 2,
     pulseSpeed: 0.02 + Math.random() * 0.03,
   };
@@ -93,7 +93,7 @@ export function BeamsBackground({
         column * spacing + spacing / 2 + (Math.random() - 0.5) * spacing * 0.5;
       beam.width = 100 + Math.random() * 100;
       beam.speed = 0.5 + Math.random() * 0.4;
-      beam.hue = 190 + (index * 70) / totalBeams;
+      beam.hue = 200 + (index * 110) / totalBeams;
       beam.opacity = 0.2 + Math.random() * 0.1;
       return beam;
     }
@@ -182,7 +182,7 @@ export function BeamsBackground({
         animate={{
           opacity: [0.05, 0.15, 0.05],
         }}
-        className="absolute inset-0 bg-[#05060A]/5"
+        className="absolute inset-0 bg-[#190520]/5"
         style={{
           backdropFilter: "blur(50px)",
         }}

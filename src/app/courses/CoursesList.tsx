@@ -130,7 +130,7 @@ export function CoursesList() {
             data-cursor-hover
             className={`rounded-full border px-4 py-2 text-xs font-medium uppercase tracking-wide transition-colors ${
               !category
-                ? "border-[#4DA9FF]/50 bg-[#185FA5]/20 text-[#7FD3FF]"
+                ? "border-[#009DFF]/50 bg-[#009DFF]/20 text-[#7FD3FF]"
                 : "border-white/10 bg-white/[0.03] text-[#A0AEC0] hover:text-white"
             }`}
           >
@@ -146,7 +146,7 @@ export function CoursesList() {
                 data-cursor-hover
                 className={`flex items-center gap-1.5 rounded-full border px-4 py-2 text-xs font-medium uppercase tracking-wide transition-colors ${
                   active
-                    ? "border-[#4DA9FF]/50 bg-[#185FA5]/20 text-[#7FD3FF]"
+                    ? "border-[#009DFF]/50 bg-[#009DFF]/20 text-[#7FD3FF]"
                     : "border-white/10 bg-white/[0.03] text-[#A0AEC0] hover:text-white"
                 }`}
               >
@@ -185,7 +185,7 @@ export function CoursesList() {
 
                 <div className="flex flex-1 flex-col p-7">
                   <div className="flex items-start justify-between">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-gradient-to-br from-[#185FA5]/25 to-transparent font-heading text-sm font-semibold text-[#7FD3FF]">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-gradient-to-br from-[#009DFF]/25 to-transparent font-heading text-sm font-semibold text-[#7FD3FF]">
                       {program.icon}
                     </div>
                     <span className="rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 text-[11px] font-medium uppercase tracking-wide text-[#7FD3FF]">
@@ -202,15 +202,15 @@ export function CoursesList() {
 
                   <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 border-t border-white/[0.06] pt-5 text-xs text-[#A0AEC0]">
                     <span className="flex items-center gap-1.5">
-                      <Signal size={13} className="text-[#4DA9FF]" />
+                      <Signal size={13} className="text-[#009DFF]" />
                       {program.difficulty}
                     </span>
                     <span className="flex items-center gap-1.5">
-                      <Clock size={13} className="text-[#4DA9FF]" />
+                      <Clock size={13} className="text-[#009DFF]" />
                       {program.duration}
                     </span>
                     <span className="flex items-center gap-1.5">
-                      <UserRound size={13} className="text-[#4DA9FF]" />
+                      <UserRound size={13} className="text-[#009DFF]" />
                       {program.instructor}
                     </span>
                   </div>

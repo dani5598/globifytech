@@ -71,7 +71,7 @@ function Accordion({
                     onClick={onNavigate}
                     className="flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm text-[color:var(--muted)] transition-colors hover:bg-[color:var(--surface-soft)] hover:text-[color:var(--fg)]"
                   >
-                    <item.icon size={16} className="shrink-0 text-[#4DA9FF]" />
+                    <item.icon size={16} className="shrink-0 text-[#009DFF]" />
                     {item.title}
                   </Link>
                 </li>
@@ -149,15 +149,15 @@ export function MobileMenu({
 
         <div className="flex flex-col gap-2 text-sm text-[color:var(--muted)]">
           <a href="tel:+10000000000" className="flex items-center gap-2.5">
-            <Phone size={15} className="shrink-0 text-[#4DA9FF]" />
+            <Phone size={15} className="shrink-0 text-[#009DFF]" />
             +1 (000) 000-0000
           </a>
           <a href="mailto:hello@globifytech.com" className="flex items-center gap-2.5">
-            <Mail size={15} className="shrink-0 text-[#4DA9FF]" />
+            <Mail size={15} className="shrink-0 text-[#009DFF]" />
             hello@globifytech.com
           </a>
           <span className="flex items-center gap-2.5">
-            <MapPin size={15} className="shrink-0 text-[#4DA9FF]" />
+            <MapPin size={15} className="shrink-0 text-[#009DFF]" />
             Remote-first, global faculty
           </span>
         </div>
@@ -168,7 +168,7 @@ export function MobileMenu({
               key={social.label}
               href={social.href}
               aria-label={social.label}
-              className="flex h-9 w-9 items-center justify-center rounded-full border border-[color:var(--border)] text-[color:var(--muted)] transition-colors hover:border-[#4DA9FF]/40 hover:text-[#7FD3FF]"
+              className="flex h-9 w-9 items-center justify-center rounded-full border border-[color:var(--border)] text-[color:var(--muted)] transition-colors hover:border-[#009DFF]/40 hover:text-[#7FD3FF]"
             >
               <social.icon />
             </a>

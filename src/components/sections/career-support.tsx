@@ -67,7 +67,7 @@ export function CareerSupport() {
           {STEPS.map((step, i) => (
             <Reveal key={step.title} delay={i * 0.06}>
               <GlassCard className="h-full p-6" glow={false}>
-                <step.icon size={20} className="text-[#4DA9FF]" />
+                <step.icon size={20} className="text-[#009DFF]" />
                 <h3 className="mt-5 font-heading text-base font-medium text-[color:var(--fg)]">
                   {step.title}
                 </h3>

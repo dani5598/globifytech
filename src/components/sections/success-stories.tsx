@@ -18,12 +18,12 @@ export function SuccessStories() {
           {testimonials.map((t, i) => (
             <Reveal key={t.name} delay={i * 0.07}>
               <GlassCard className="h-full p-8" glow={i % 2 === 0}>
-                <Quote size={22} className="text-[#185FA5]" />
+                <Quote size={22} className="text-[#009DFF]" />
                 <p className="mt-5 text-balance text-base leading-relaxed text-white/90">
                   &ldquo;{t.quote}&rdquo;
                 </p>
                 <div className="mt-7 flex items-center gap-3 border-t border-white/[0.06] pt-5">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-gradient-to-br from-[#185FA5]/30 to-transparent font-heading text-sm font-medium text-[#7FD3FF]">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-gradient-to-br from-[#009DFF]/30 to-transparent font-heading text-sm font-medium text-[#7FD3FF]">
                     {t.name
                       .split(" ")
                       .map((n) => n[0])

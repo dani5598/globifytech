@@ -48,7 +48,7 @@ export default function EnrollPage() {
                   key={detail.label}
                   className="flex items-center gap-3 text-sm text-[#A0AEC0]"
                 >
-                  <span className="flex h-9 w-9 items-center justify-center rounded-xl border border-white/10 bg-white/[0.03] text-[#4DA9FF]">
+                  <span className="flex h-9 w-9 items-center justify-center rounded-xl border border-white/10 bg-white/[0.03] text-[#009DFF]">
                     <detail.icon size={16} />
                   </span>
                   {detail.label}

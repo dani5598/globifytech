@@ -39,7 +39,7 @@ export function ScrollRail() {
       <div className="relative mt-32 h-[calc(100%-16rem)] w-px bg-white/[0.08]">
         <div
           ref={fillRef}
-          className="absolute top-0 left-0 w-px bg-gradient-to-b from-[#4DA9FF] to-[#185FA5] transition-[height] duration-150 ease-out"
+          className="absolute top-0 left-0 w-px bg-gradient-to-b from-[#009DFF] to-[#009DFF] transition-[height] duration-150 ease-out"
         />
         <div
           ref={dotRef}

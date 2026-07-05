@@ -46,8 +46,8 @@ export function LiquidGlassButton({
 
   const base =
     variant === "primary"
-      ? "text-white bg-gradient-to-b from-[#2C7BC4]/55 via-[#185FA5]/40 to-[#0E3D6E]/50 border border-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.35),inset_0_-1px_0_rgba(255,255,255,0.06),0_8px_30px_-8px_rgba(24,95,165,0.8)] hover:border-white/30 hover:shadow-[inset_0_1px_0_rgba(255,255,255,0.45),inset_0_-1px_0_rgba(255,255,255,0.08),0_10px_40px_-6px_rgba(77,169,255,0.9)]"
-      : "text-[color:var(--fg)] bg-[color:var(--surface-soft)] border border-[color:var(--glass-border)] shadow-[inset_0_1px_0_rgba(255,255,255,0.14),inset_0_-1px_0_rgba(255,255,255,0.04)] hover:bg-[color:var(--surface-hover)] hover:border-[color:var(--border-strong)]";
+      ? "text-white bg-gradient-to-b from-[#FF4DE9]/90 via-[#FF0AE0]/85 to-[#C0089F]/90 border border-white/25 shadow-[inset_0_1px_0_rgba(255,255,255,0.4),inset_0_-1px_0_rgba(255,255,255,0.08),0_8px_30px_-8px_rgba(255,10,224,0.7)] hover:border-white/40 hover:shadow-[inset_0_1px_0_rgba(255,255,255,0.5),inset_0_-1px_0_rgba(255,255,255,0.1),0_10px_44px_-6px_rgba(255,10,224,0.95)]"
+      : "text-[color:var(--fg)] bg-[color:var(--surface-soft)] border border-[color:var(--glass-border)] shadow-[inset_0_1px_0_rgba(255,255,255,0.14),inset_0_-1px_0_rgba(255,255,255,0.04)] hover:bg-[#452054]/55 hover:border-[#452054] hover:text-white";
 
   const sizing =
     size === "sm"

@@ -17,19 +17,23 @@ const FOOTER_LINKS: { heading: string; links: { label: string; href: string }[] 
   {
     heading: "Institute",
     links: [
-      { label: "About", href: "/#learning-experience" },
-      { label: "Instructors", href: "/#instructors" },
-      { label: "Student Success", href: "/#success-stories" },
-      { label: "Admissions", href: "/#events" },
+      { label: "About Us", href: "/about" },
+      { label: "Success Stories", href: "/success-stories" },
+      { label: "Events & Workshops", href: "/events" },
+      { label: "Career Services", href: "/career-services" },
+      { label: "Blogs & Resources", href: "/blog" },
     ],
   },
   {
-    heading: "Resources",
+    heading: "Get Started",
     links: [
       { label: "All Courses", href: "/courses" },
+      { label: "Admissions", href: "/admissions" },
       { label: "Enroll Now", href: "/enroll" },
-      { label: "FAQs", href: "/#faqs" },
-      { label: "Contact", href: "/#contact" },
+      { label: "Student Dashboard", href: "/student-dashboard" },
+      { label: "Instructor Dashboard", href: "/instructor-dashboard" },
+      { label: "FAQ", href: "/faq" },
+      { label: "Contact Us", href: "/contact" },
     ],
   },
 ];
@@ -43,7 +47,7 @@ const SOCIALS = [
 
 export function Footer() {
   return (
-    <footer className="relative border-t border-white/[0.06] pt-20 pb-10">
+    <footer className="relative border-t border-white/10 bg-[#190520] pt-20 pb-10">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1fr]">
           <div className="flex flex-col gap-4">
@@ -59,7 +63,7 @@ export function Footer() {
                   href={social.href}
                   data-cursor-hover
                   aria-label="Social link"
-                  className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-[#A0AEC0] transition-colors hover:border-[#4DA9FF]/40 hover:text-[#7FD3FF]"
+                  className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-[#A0AEC0] transition-colors hover:border-[#009DFF]/40 hover:text-[#7FD3FF]"
                 >
                   <social.icon />
                 </a>
@@ -92,11 +96,11 @@ export function Footer() {
         <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-white/[0.06] pt-8 text-xs text-[#A0AEC0]/70 sm:flex-row">
           <p>&copy; {new Date().getFullYear()} Globify Tech Institute. All rights reserved.</p>
           <div className="flex items-center gap-6">
-            <a href="#" data-cursor-hover className="hover:text-white">
+            <a href="/privacy-policy" data-cursor-hover className="hover:text-white">
               Privacy Policy
             </a>
-            <a href="#" data-cursor-hover className="hover:text-white">
-              Terms of Service
+            <a href="/terms" data-cursor-hover className="hover:text-white">
+              Terms &amp; Conditions
             </a>
           </div>
         </div>

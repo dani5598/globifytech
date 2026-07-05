@@ -46,8 +46,8 @@ export function Faqs() {
                     </span>
                     <span
                       className={cn(
-                        "flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-[color:var(--border)] text-[#4DA9FF] transition-transform duration-300",
-                        isOpen && "rotate-45 bg-[#185FA5]/20"
+                        "flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-[color:var(--border)] text-[#009DFF] transition-transform duration-300",
+                        isOpen && "rotate-45 bg-[#009DFF]/20"
                       )}
                     >
                       <Plus size={15} />

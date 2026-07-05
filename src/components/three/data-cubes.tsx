@@ -46,12 +46,12 @@ export function DataCubes() {
   return (
     <group>
       <ambientLight intensity={0.5} />
-      <pointLight position={[3, 2, 4]} intensity={30} color="#4DA9FF" />
+      <pointLight position={[3, 2, 4]} intensity={30} color="#009DFF" />
       <pointLight position={[-3, -2, -2]} intensity={16} color="#7FD3FF" />
-      <FloatingCube position={[-1.6, 0.6, 0]} size={0.9} speed={0.5} color="#185FA5" />
-      <FloatingCube position={[1.5, -0.5, -0.6]} size={0.6} speed={0.7} color="#4DA9FF" />
+      <FloatingCube position={[-1.6, 0.6, 0]} size={0.9} speed={0.5} color="#009DFF" />
+      <FloatingCube position={[1.5, -0.5, -0.6]} size={0.6} speed={0.7} color="#009DFF" />
       <FloatingCube position={[0.3, 1.1, -1.2]} size={0.4} speed={0.9} color="#7FD3FF" />
-      <FloatingCube position={[-0.7, -1.1, 0.4]} size={0.35} speed={0.6} color="#4DA9FF" />
+      <FloatingCube position={[-0.7, -1.1, 0.4]} size={0.35} speed={0.6} color="#009DFF" />
     </group>
   );
 }

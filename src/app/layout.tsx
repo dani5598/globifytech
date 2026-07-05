@@ -62,7 +62,7 @@ export default function RootLayout({
       </head>
       {/* No bg on body: an opaque body background paints over fixed -z-10
           layers (particles/ambient). html carries the page background. */}
-      <body className="min-h-full flex flex-col text-[color:var(--fg)] font-body selection:bg-[#185FA5]/40 selection:text-white">
+      <body className="min-h-full flex flex-col text-[color:var(--fg)] font-body selection:bg-[#009DFF]/40 selection:text-white">
         <ThemeProvider>
           <SmoothScroll />
           <Cursor />

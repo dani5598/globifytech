@@ -18,7 +18,7 @@ export function UpcomingEvents() {
           {events.map((event, i) => (
             <Reveal key={event.title} delay={i * 0.07}>
               <GlassCard className="flex h-full items-start gap-5 p-7" glow={false}>
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.03] text-[#4DA9FF]">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.03] text-[#009DFF]">
                   <CalendarDays size={18} />
                 </div>
                 <div className="flex-1">

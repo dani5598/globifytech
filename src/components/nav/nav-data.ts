@@ -34,12 +34,12 @@ export type NavItem =
 
 export const NAV_ITEMS: NavItem[] = [
   { type: "link", label: "Home", href: "/#home" },
-  { type: "link", label: "About", href: "/#learning-experience" },
+  { type: "link", label: "About", href: "/about" },
   { type: "menu", label: "AI Courses", key: "courses" },
   { type: "menu", label: "Services", key: "services" },
-  { type: "link", label: "Success Stories", href: "/#success-stories" },
+  { type: "link", label: "Success Stories", href: "/success-stories" },
   { type: "link", label: "Blog", href: "/blog" },
-  { type: "link", label: "Contact", href: "/#contact" },
+  { type: "link", label: "Contact", href: "/contact" },
 ];
 
 export const AI_COURSES: MenuItem[] = [

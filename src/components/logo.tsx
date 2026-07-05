@@ -13,7 +13,7 @@ export function Logo({ className }: { className?: string }) {
         className="shrink-0 object-contain"
       />
       <span className="font-heading text-lg font-semibold tracking-tight text-[color:var(--fg)]">
-        Globify <span className="text-[#4DA9FF]">Tech</span>
+        Globify <span className="text-[#009DFF]">Tech</span>
       </span>
     </div>
   );

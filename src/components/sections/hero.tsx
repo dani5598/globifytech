@@ -4,7 +4,7 @@ import { useState, type FormEvent } from "react";
 import { useRouter } from "next/navigation";
 import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
-import { ArrowRight, CalendarCheck, ChevronDown, Search } from "lucide-react";
+import { ArrowRight, ChevronDown, Search, UserPlus } from "lucide-react";
 import { LiquidGlassButton } from "@/components/ui/liquid-glass-button";
 import { SectionTag } from "@/components/ui/section-heading";
 
@@ -41,31 +41,41 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
           >
-            <SectionTag>Future Ready AI Education</SectionTag>
+            <SectionTag>Learn Today&apos;s Skills · Lead Tomorrow&apos;s World</SectionTag>
           </motion.div>
 
           <motion.h1
             initial={{ opacity: 0, y: 24, filter: "blur(10px)" }}
             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             transition={{ duration: 0.9, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-            className="font-heading text-5xl font-medium leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-[4.2rem]"
+            className="font-heading text-4xl font-medium leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-6xl"
           >
-            Learn the Skills
+            Build Your Future with
             <br />
-            That Build
-            <br />
-            <span className="text-gradient-blue">Tomorrow.</span>
+            <span className="text-gradient-blue">
+              AI, Technology &amp; Digital Innovation
+            </span>
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
-            className="max-w-lg text-balance text-base leading-relaxed text-[#A0AEC0] sm:text-lg"
+            className="max-w-xl text-balance text-base leading-relaxed text-[#A0AEC0] sm:text-lg"
           >
-            Master Digital Marketing, Full Stack Web Development, Social
-            Media Marketing, Video Editing, Graphic Designing and TikTok
-            Shop through practical, AI-powered, industry-focused learning.
+
+      
+          </motion.p>
+
+          <motion.p
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.38, ease: [0.16, 1, 0.3, 1] }}
+            className="font-heading text-base font-medium tracking-wide text-white sm:text-lg"
+          >
+            🚀 Learn.{" "}
+            <span className="text-gradient-blue">Create. Innovate.</span>{" "}
+            Succeed.
           </motion.p>
 
           <motion.div
@@ -74,16 +84,16 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
             className="mt-2 flex flex-wrap items-center gap-4"
           >
-            <LiquidGlassButton href="#programs">
-              Explore Programs
+            <LiquidGlassButton href="/courses">
+              Explore Courses
               <ArrowRight
                 size={16}
                 className="transition-transform duration-300 group-hover:translate-x-1"
               />
             </LiquidGlassButton>
-            <LiquidGlassButton href="#contact" variant="ghost">
-              <CalendarCheck size={16} />
-              Book Consultation
+            <LiquidGlassButton href="/enroll" variant="ghost">
+              <UserPlus size={16} />
+              Apply Now
             </LiquidGlassButton>
           </motion.div>
 
@@ -124,7 +134,7 @@ export function Hero() {
 
         {/* RIGHT — 3D object */}
         <div className="relative z-0 h-[420px] sm:h-[520px] lg:h-[620px]">
-          <div className="absolute inset-0 rounded-full bg-[#185FA5]/15 blur-[100px]" />
+          <div className="absolute inset-0 rounded-full bg-[#009DFF]/15 blur-[100px]" />
           <HeroScene />
         </div>
       </div>

@@ -35,7 +35,7 @@ export function Cursor() {
         ringRef.current.style.height = interactive ? "56px" : "32px";
         ringRef.current.style.borderColor = interactive
           ? "rgba(125, 211, 255, 0.6)"
-          : "rgba(77, 169, 255, 0.35)";
+          : "rgba(0,157,255, 0.35)";
       }
     };
 
@@ -71,7 +71,7 @@ export function Cursor() {
       <div
         ref={ringRef}
         className="absolute top-0 left-0 -ml-4 -mt-4 h-8 w-8 rounded-full border transition-[width,height,border-color] duration-200 ease-out"
-        style={{ borderColor: "rgba(77, 169, 255, 0.35)" }}
+        style={{ borderColor: "rgba(0,157,255, 0.35)" }}
       />
     </div>
   );
