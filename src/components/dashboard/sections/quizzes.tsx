@@ -39,7 +39,7 @@ function useCountdown(seconds: number) {
 function TimeBox({ value, label }: { value: number; label: string }) {
   return (
     <div className="flex flex-col items-center">
-      <span className="flex h-12 w-12 items-center justify-center rounded-xl border border-[#009DFF]/25 bg-[#009DFF]/10 font-heading text-lg font-semibold tabular-nums text-[#7FD3FF]">
+      <span className="flex h-12 w-12 items-center justify-center rounded-xl border border-[#009DFF]/25 bg-[#009DFF]/10 font-heading text-lg font-bold tabular-nums text-[#7FD3FF]">
         {String(value).padStart(2, "0")}
       </span>
       <span className="mt-1 text-[10px] uppercase tracking-wide text-[color:var(--muted)]">
@@ -67,7 +67,7 @@ export function QuizzesSection() {
             <span className="inline-flex items-center gap-1.5 rounded-full bg-[#FF0AE0]/15 px-3 py-1 text-xs font-medium text-[#FF6FEF]">
               <Timer size={12} /> Upcoming Exam
             </span>
-            <h3 className="mt-4 font-heading text-xl font-semibold text-[color:var(--fg)]">
+            <h3 className="mt-4 font-heading text-xl font-bold text-[color:var(--fg)]">
               {UPCOMING_QUIZ.title}
             </h3>
             <p className="mt-1 text-sm text-[color:var(--muted)]">
@@ -112,7 +112,7 @@ export function QuizzesSection() {
                   <p className="text-xs text-[color:var(--muted)]">{r.date}</p>
                 </div>
                 <span
-                  className="font-heading text-lg font-semibold"
+                  className="font-heading text-lg font-bold"
                   style={{ color: r.score >= 90 ? "#22c55e" : "#7FD3FF" }}
                 >
                   {r.score}

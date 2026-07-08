@@ -40,7 +40,7 @@ export function CertificatesSection() {
                   <p className="mt-4 text-[10px] uppercase tracking-[0.2em] text-white/70">
                     Certificate of Completion
                   </p>
-                  <p className="mt-1 font-heading text-lg font-semibold leading-tight text-white">
+                  <p className="mt-1 font-heading text-lg font-bold leading-tight text-white">
                     {cert.title}
                   </p>
                   <p className="mt-3 text-[11px] text-white/70">

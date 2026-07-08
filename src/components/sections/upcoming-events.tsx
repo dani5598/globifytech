@@ -30,7 +30,7 @@ export function UpcomingEvents() {
                       {event.type}
                     </span>
                   </div>
-                  <h3 className="mt-2 font-heading text-lg font-medium text-white">
+                  <h3 className="mt-2 font-heading text-lg font-bold text-white">
                     {event.title}
                   </h3>
                   <p className="mt-2 text-sm leading-relaxed text-[#A0AEC0]">

@@ -21,6 +21,7 @@ export const metadata: Metadata = {
   title: "Events & Workshops",
   description:
     "Join Globify Tech Institute info sessions, live workshops, demo days and admissions events — on campus and virtual. Meet the faculty, tour the labs and preview our AI-powered programs.",
+  alternates: { canonical: "/events" },
 };
 
 const FORMATS = [
@@ -99,7 +100,7 @@ export default function EventsPage() {
               <span className="flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.03] text-[#009DFF]">
                 <format.icon size={20} />
               </span>
-              <h3 className="font-heading text-base font-medium text-[color:var(--fg)]">
+              <h3 className="font-heading text-base font-bold text-[color:var(--fg)]">
                 {format.title}
               </h3>
               <p className="text-sm leading-relaxed text-[color:var(--muted)]">
@@ -133,7 +134,7 @@ export default function EventsPage() {
                       {event.type}
                     </span>
                   </div>
-                  <h3 className="mt-2 font-heading text-lg font-medium text-[color:var(--fg)]">
+                  <h3 className="mt-2 font-heading text-lg font-bold text-[color:var(--fg)]">
                     {event.title}
                   </h3>
                   <p className="mt-2 text-sm leading-relaxed text-[color:var(--muted)]">
@@ -172,7 +173,7 @@ export default function EventsPage() {
                   <Video size={12} />
                   {w.format}
                 </span>
-                <h3 className="mt-5 font-heading text-lg font-medium leading-snug text-[color:var(--fg)]">
+                <h3 className="mt-5 font-heading text-lg font-bold leading-snug text-[color:var(--fg)]">
                   {w.title}
                 </h3>
                 <p className="mt-3 flex-1 text-sm leading-relaxed text-[color:var(--muted)]">
@@ -202,7 +203,7 @@ export default function EventsPage() {
         <div className="mt-28 overflow-hidden rounded-3xl border border-[color:var(--border)] bg-gradient-to-br from-[#009DFF]/10 via-transparent to-[#452054]/20 p-10 sm:p-14">
           <div className="flex flex-col items-start justify-between gap-6 lg:flex-row lg:items-center">
             <div className="max-w-xl">
-              <h2 className="font-heading text-2xl font-medium tracking-tight text-gradient sm:text-3xl">
+              <h2 className="font-heading text-2xl font-bold tracking-tight text-gradient sm:text-3xl">
                 Want us to run a workshop for your team or campus?
               </h2>
               <p className="mt-3 text-base leading-relaxed text-[color:var(--muted)]">

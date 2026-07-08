@@ -13,7 +13,7 @@ export function LegalBody({ sections }: { sections: LegalSection[] }) {
       {sections.map((section, i) => (
         <Reveal key={section.heading} delay={Math.min(i * 0.03, 0.2)}>
           <section className="scroll-mt-32">
-            <h2 className="font-heading text-xl font-medium tracking-tight text-[color:var(--fg)] sm:text-2xl">
+            <h2 className="font-heading text-xl font-bold tracking-tight text-[color:var(--fg)] sm:text-2xl">
               {i + 1}. {section.heading}
             </h2>
             {section.paragraphs?.map((p, pi) => (

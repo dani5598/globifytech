@@ -21,6 +21,7 @@ export const metadata: Metadata = {
   title: "Career Services",
   description:
     "Globify Tech Institute career services — portfolio reviews, mock interviews, resume building, freelancing guidance, 1:1 coaching and a 40+ company hiring partner network with a 94% placement rate.",
+  alternates: { canonical: "/career-services" },
 };
 
 const SERVICES = [
@@ -121,7 +122,7 @@ export default function CareerServicesPage() {
               <span className="flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/[0.03] text-[#009DFF]">
                 <stat.icon size={18} />
               </span>
-              <p className="font-heading text-2xl font-medium text-[color:var(--fg)] sm:text-3xl">
+              <p className="font-heading text-2xl font-bold text-[color:var(--fg)] sm:text-3xl">
                 {stat.value}
               </p>
               <p className="text-xs text-[color:var(--muted)]">{stat.label}</p>
@@ -144,7 +145,7 @@ export default function CareerServicesPage() {
                 <span className="flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.03] text-[#009DFF]">
                   <service.icon size={20} />
                 </span>
-                <h3 className="font-heading text-lg font-medium text-[color:var(--fg)]">
+                <h3 className="font-heading text-lg font-bold text-[color:var(--fg)]">
                   {service.title}
                 </h3>
                 <p className="text-sm leading-relaxed text-[color:var(--muted)]">
@@ -167,10 +168,10 @@ export default function CareerServicesPage() {
           {STEPS.map((s, i) => (
             <Reveal key={s.step} delay={i * 0.08}>
               <div className="relative h-full rounded-3xl border border-[color:var(--border)] bg-[color:var(--surface-soft)] p-7">
-                <span className="font-heading text-3xl font-medium text-gradient-blue">
+                <span className="font-heading text-3xl font-bold text-gradient-blue">
                   {s.step}
                 </span>
-                <h3 className="mt-4 font-heading text-base font-medium text-[color:var(--fg)]">
+                <h3 className="mt-4 font-heading text-base font-bold text-[color:var(--fg)]">
                   {s.title}
                 </h3>
                 <p className="mt-2 text-sm leading-relaxed text-[color:var(--muted)]">
@@ -194,7 +195,7 @@ export default function CareerServicesPage() {
             {partners.map((partner) => (
               <div
                 key={partner}
-                className="flex items-center justify-center rounded-2xl border border-[color:var(--border)] bg-[color:var(--surface-soft)] px-4 py-6 text-center font-heading text-sm font-medium text-[color:var(--muted)]"
+                className="flex items-center justify-center rounded-2xl border border-[color:var(--border)] bg-[color:var(--surface-soft)] px-4 py-6 text-center font-heading text-sm font-bold text-[color:var(--muted)]"
               >
                 {partner}
               </div>
@@ -206,7 +207,7 @@ export default function CareerServicesPage() {
       {/* CTA */}
       <Reveal delay={0.1}>
         <div className="mt-28 overflow-hidden rounded-3xl border border-[color:var(--border)] bg-gradient-to-br from-[#009DFF]/10 via-transparent to-[#452054]/20 p-10 text-center sm:p-16">
-          <h2 className="mx-auto max-w-2xl font-heading text-3xl font-medium tracking-tight text-gradient sm:text-4xl">
+          <h2 className="mx-auto max-w-2xl font-heading text-3xl font-bold tracking-tight text-gradient sm:text-4xl">
             Let's build the career you came for
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-[color:var(--muted)]">

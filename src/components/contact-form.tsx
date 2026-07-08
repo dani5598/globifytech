@@ -4,6 +4,7 @@ import { useState, type FormEvent } from "react";
 import { CheckCircle2 } from "lucide-react";
 import { GlassCard } from "@/components/ui/glass-card";
 import { LiquidGlassButton } from "@/components/ui/liquid-glass-button";
+import { openWhatsApp, WHATSAPP_DISPLAY } from "@/lib/whatsapp";
 
 const TOPICS = [
   "General enquiry",
@@ -16,9 +17,19 @@ const TOPICS = [
 
 export function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
+  const [waUrl, setWaUrl] = useState<string | null>(null);
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const data = new FormData(e.currentTarget);
+    const url = openWhatsApp("New contact message — globifytech.com", [
+      ["Name", String(data.get("name") ?? "")],
+      ["Email", String(data.get("email") ?? "")],
+      ["Phone", String(data.get("phone") ?? "")],
+      ["Topic", String(data.get("topic") ?? "")],
+      ["Message", String(data.get("message") ?? "")],
+    ]);
+    setWaUrl(url);
     setSubmitted(true);
   };
 
@@ -29,13 +40,19 @@ export function ContactForm() {
           <div className="flex h-14 w-14 items-center justify-center rounded-full border border-white/10 bg-[#009DFF]/20 text-[#7FD3FF]">
             <CheckCircle2 size={22} />
           </div>
-          <h3 className="font-heading text-xl font-medium text-[color:var(--fg)]">
-            Message sent
+          <h3 className="font-heading text-xl font-bold text-[color:var(--fg)]">
+            Continue on WhatsApp
           </h3>
           <p className="max-w-xs text-sm text-[color:var(--muted)]">
-            Thanks for reaching out. A member of our team will get back to you
-            within one business day.
+            We&apos;ve opened WhatsApp with your message pre-filled — just tap
+            send and our team will reply. If nothing opened, message us at{" "}
+            {WHATSAPP_DISPLAY}.
           </p>
+          {waUrl && (
+            <LiquidGlassButton href={waUrl} className="mt-2">
+              Open WhatsApp
+            </LiquidGlassButton>
+          )}
         </div>
       ) : (
         <form onSubmit={handleSubmit} className="flex flex-col gap-5">
@@ -67,7 +84,7 @@ export function ContactForm() {
               name="topic"
               required
               defaultValue=""
-              className="w-full rounded-xl border border-[color:var(--border)] bg-[color:var(--surface-soft)] px-4 py-3 text-sm text-[color:var(--fg)] outline-none transition-colors focus:border-[#009DFF]/50"
+              className="w-full rounded-xl border border-[color:var(--border)] bg-[color:var(--surface-soft)] px-4 py-3 text-sm text-[color:var(--fg)] outline-none transition-colors focus:border-[#009DFF]/50 [&>option]:bg-[color:var(--surface)] [&>option]:text-[color:var(--fg)]"
             >
               <option value="" disabled>
                 Select a topic

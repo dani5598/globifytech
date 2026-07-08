@@ -1,10 +1,11 @@
 import type { MetadataRoute } from "next";
 import { programs } from "@/data/content";
+import { SITE } from "@/lib/seo";
 
 // Required for `output: "export"` — emit a static sitemap.xml at build time.
 export const dynamic = "force-static";
 
-const BASE_URL = "https://www.globifytech.com";
+const BASE_URL = SITE.url;
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();

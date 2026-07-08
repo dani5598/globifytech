@@ -3,11 +3,16 @@ import { PageHeader } from "@/components/ui/page-header";
 import { Reveal } from "@/components/ui/reveal";
 import { LiquidGlassButton } from "@/components/ui/liquid-glass-button";
 import { FaqAccordion, type FaqItem } from "@/components/faq-accordion";
+import { JsonLd } from "@/components/seo/json-ld";
+import { faqPageSchema } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "FAQ",
   description:
     "Answers to the most common questions about Globify Tech Institute — admissions, program format, schedules, payments, certificates and career support.",
+  alternates: {
+    canonical: "/faq",
+  },
 };
 
 const FAQS: FaqItem[] = [
@@ -88,6 +93,7 @@ const FAQS: FaqItem[] = [
 export default function FaqPage() {
   return (
     <div className="mx-auto max-w-4xl px-6 pb-28 lg:px-10">
+      <JsonLd schema={faqPageSchema(FAQS)} />
       <PageHeader
         tag="FAQ"
         title="Answers before you ask"
@@ -101,7 +107,7 @@ export default function FaqPage() {
       {/* Still have questions */}
       <Reveal delay={0.1}>
         <div className="mt-20 overflow-hidden rounded-3xl border border-[color:var(--border)] bg-gradient-to-br from-[#009DFF]/10 via-transparent to-[#452054]/20 p-10 text-center sm:p-14">
-          <h2 className="mx-auto max-w-xl font-heading text-2xl font-medium tracking-tight text-gradient sm:text-3xl">
+          <h2 className="mx-auto max-w-xl font-heading text-2xl font-bold tracking-tight text-gradient sm:text-3xl">
             Still have a question?
           </h2>
           <p className="mx-auto mt-3 max-w-md text-base leading-relaxed text-[color:var(--muted)]">

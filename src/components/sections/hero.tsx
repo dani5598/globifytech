@@ -48,7 +48,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 24, filter: "blur(10px)" }}
             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             transition={{ duration: 0.9, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-            className="font-heading text-4xl font-medium leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-6xl"
+            className="font-heading text-4xl font-bold leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-6xl"
           >
             Build Your Future with
             <br />
@@ -71,7 +71,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.38, ease: [0.16, 1, 0.3, 1] }}
-            className="font-heading text-base font-medium tracking-wide text-white sm:text-lg"
+            className="font-heading text-base font-bold tracking-wide text-white sm:text-lg"
           >
             🚀 Learn.{" "}
             <span className="text-gradient-blue">Create. Innovate.</span>{" "}

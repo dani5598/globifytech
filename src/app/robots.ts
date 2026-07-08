@@ -1,0 +1,18 @@
+import type { MetadataRoute } from "next";
+import { SITE } from "@/lib/seo";
+
+// Required for `output: "export"` — emit a static robots.txt at build time.
+export const dynamic = "force-static";
+
+export default function robots(): MetadataRoute.Robots {
+  return {
+    rules: {
+      userAgent: "*",
+      allow: "/",
+      // /dashboard is an interactive demo app, not indexable content.
+      disallow: ["/dashboard"],
+    },
+    sitemap: `${SITE.url}/sitemap.xml`,
+    host: SITE.url,
+  };
+}

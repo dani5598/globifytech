@@ -41,7 +41,7 @@ export function Faqs() {
                     data-cursor-hover
                     className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left"
                   >
-                    <span className="font-heading text-base font-medium text-[color:var(--fg)] sm:text-lg">
+                    <span className="font-heading text-base font-bold text-[color:var(--fg)] sm:text-lg">
                       {faq.question}
                     </span>
                     <span

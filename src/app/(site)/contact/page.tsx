@@ -15,25 +15,27 @@ export const metadata: Metadata = {
   title: "Contact Us",
   description:
     "Get in touch with Globify Tech Institute. Questions about programs, admissions, career services or partnerships — our team replies within one business day.",
+  alternates: { canonical: "/contact" },
 };
 
 const CHANNELS = [
   {
     icon: Mail,
     label: "Email",
-    value: "hello@globifytech.com",
-    href: "mailto:hello@globifytech.com",
+    value: "info@globifytech.com",
+    href: "mailto:info@globifytech.com",
   },
   {
     icon: Phone,
     label: "Phone / WhatsApp",
-    value: "+1 (415) 555-0134",
-    href: "tel:+14155550134",
+    value: "+92 339 1110171",
+    href: "tel:+923391110171",
   },
   {
     icon: MapPin,
-    label: "Campuses",
-    value: "San Francisco · London · Remote",
+    label: "Address",
+    value:
+      "Office no 1, 1st floor, Rafaqat Ali Plaza, Main Chen One Rd, Pilot Ground Block B People's Colony No 1, Faisalabad, 38000",
     href: undefined,
   },
   {
@@ -122,7 +124,7 @@ export default function ContactPage() {
                       <link.icon size={18} />
                     </span>
                     <div className="flex-1">
-                      <h3 className="font-heading text-base font-medium text-[color:var(--fg)]">
+                      <h3 className="font-heading text-base font-bold text-[color:var(--fg)]">
                         {link.title}
                       </h3>
                       <p className="mt-0.5 text-sm text-[color:var(--muted)]">

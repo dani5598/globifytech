@@ -23,7 +23,7 @@ export function SuccessStories() {
                   &ldquo;{t.quote}&rdquo;
                 </p>
                 <div className="mt-7 flex items-center gap-3 border-t border-white/[0.06] pt-5">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-gradient-to-br from-[#009DFF]/30 to-transparent font-heading text-sm font-medium text-[#7FD3FF]">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-gradient-to-br from-[#009DFF]/30 to-transparent font-heading text-sm font-bold text-[#7FD3FF]">
                     {t.name
                       .split(" ")
                       .map((n) => n[0])

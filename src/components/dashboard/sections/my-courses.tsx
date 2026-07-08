@@ -66,7 +66,7 @@ export function MyCoursesSection() {
 
               {/* Body */}
               <div className="flex flex-1 flex-col p-5">
-                <h3 className="font-heading text-base font-medium text-[color:var(--fg)]">
+                <h3 className="font-heading text-base font-bold text-[color:var(--fg)]">
                   {course.title}
                 </h3>
                 <p className="mt-1 text-xs text-[color:var(--muted)]">

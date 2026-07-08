@@ -10,12 +10,17 @@ export const metadata: Metadata = {
   title: "Enroll",
   description:
     "Apply to a Globify Tech Institute program. Tell us your goals and an admissions advisor will confirm your seat within one business day.",
+  alternates: { canonical: "/enroll" },
 };
 
 const CONTACT_DETAILS = [
-  { icon: Mail, label: "admissions@globifytech.edu" },
-  { icon: Phone, label: "+1 (415) 555-0134" },
-  { icon: MapPin, label: "San Francisco · London · Remote" },
+  { icon: Mail, label: "info@globifytech.com" },
+  { icon: Phone, label: "+92 339 1110171" },
+  {
+    icon: MapPin,
+    label:
+      "Office no 1, 1st floor, Rafaqat Ali Plaza, Main Chen One Rd, Pilot Ground Block B People's Colony No 1, Faisalabad, 38000",
+  },
 ];
 
 export default function EnrollPage() {
@@ -28,7 +33,7 @@ export default function EnrollPage() {
               <SectionTag>Enroll</SectionTag>
             </Reveal>
             <Reveal delay={0.08}>
-              <h1 className="max-w-xl font-heading text-4xl font-medium leading-[1.1] tracking-tight text-gradient sm:text-5xl">
+              <h1 className="max-w-xl font-heading text-4xl font-bold leading-[1.1] tracking-tight text-gradient sm:text-5xl">
                 Apply to a Globify Tech Institute program
               </h1>
             </Reveal>

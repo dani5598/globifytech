@@ -45,7 +45,7 @@ export function PageHeader({
         </Reveal>
       )}
       <Reveal delay={0.08}>
-        <h1 className="max-w-3xl font-heading text-4xl font-medium leading-[1.1] tracking-tight text-gradient sm:text-5xl">
+        <h1 className="max-w-3xl font-heading text-4xl font-bold leading-[1.1] tracking-tight text-gradient sm:text-5xl">
           {title}
         </h1>
       </Reveal>

@@ -7,18 +7,34 @@ import { LiquidGlassButton } from "@/components/ui/liquid-glass-button";
 import { Reveal } from "@/components/ui/reveal";
 import { GlassCard } from "@/components/ui/glass-card";
 import { programs } from "@/data/content";
+import { openWhatsApp, WHATSAPP_DISPLAY } from "@/lib/whatsapp";
 
 const CONTACT_DETAILS = [
-  { icon: Mail, label: "admissions@globifytech.edu" },
-  { icon: Phone, label: "+1 (415) 555-0134" },
-  { icon: MapPin, label: "San Francisco · London · Remote" },
+  { icon: Mail, label: "info@globifytech.com" },
+  { icon: Phone, label: "+92 339 1110171" },
+  {
+    icon: MapPin,
+    label:
+      "Office no 1, 1st floor, Rafaqat Ali Plaza, Main Chen One Rd, Pilot Ground Block B People's Colony No 1, Faisalabad, 38000",
+  },
 ];
 
 export function Contact() {
   const [submitted, setSubmitted] = useState(false);
+  const [waUrl, setWaUrl] = useState<string | null>(null);
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const data = new FormData(e.currentTarget);
+    const slug = String(data.get("program") ?? "");
+    const program = programs.find((p) => p.slug === slug)?.title ?? slug;
+    const url = openWhatsApp("New consultation request — globifytech.com", [
+      ["Name", String(data.get("name") ?? "")],
+      ["Email", String(data.get("email") ?? "")],
+      ["Program", program],
+      ["Message", String(data.get("message") ?? "")],
+    ]);
+    setWaUrl(url);
     setSubmitted(true);
   };
 
@@ -58,13 +74,19 @@ export function Contact() {
                   <div className="flex h-14 w-14 items-center justify-center rounded-full border border-[color:var(--border)] bg-[#009DFF]/20 text-[#7FD3FF]">
                     <Mail size={22} />
                   </div>
-                  <h3 className="font-heading text-xl font-medium text-[color:var(--fg)]">
-                    Request received
+                  <h3 className="font-heading text-xl font-bold text-[color:var(--fg)]">
+                    Continue on WhatsApp
                   </h3>
                   <p className="max-w-xs text-sm text-[color:var(--muted)]">
-                    An admissions advisor will reach out within one business day
-                    to schedule your consultation.
+                    We&apos;ve opened WhatsApp with your details pre-filled — just
+                    tap send and an advisor will reply. If nothing opened, message
+                    us at {WHATSAPP_DISPLAY}.
                   </p>
+                  {waUrl && (
+                    <LiquidGlassButton href={waUrl} className="mt-2">
+                      Open WhatsApp
+                    </LiquidGlassButton>
+                  )}
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="flex flex-col gap-5">
@@ -88,7 +110,7 @@ export function Contact() {
                       id="program"
                       name="program"
                       required
-                      className="w-full rounded-xl border border-[color:var(--border)] bg-[color:var(--surface-soft)] px-4 py-3 text-sm text-white outline-none transition-colors focus:border-[#009DFF]/50"
+                      className="w-full rounded-xl border border-[color:var(--border)] bg-[color:var(--surface-soft)] px-4 py-3 text-sm text-white outline-none transition-colors focus:border-[#009DFF]/50 [&>option]:bg-[color:var(--surface)] [&>option]:text-[color:var(--fg)]"
                       defaultValue=""
                     >
                       <option value="" disabled>

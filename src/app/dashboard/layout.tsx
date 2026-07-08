@@ -5,6 +5,8 @@ export const metadata: Metadata = {
   title: "Student Dashboard",
   description:
     "Your Globify Tech Institute learning home — track progress, join live classes, submit assignments, chat with the AI tutor, earn certificates and land opportunities.",
+  // Interactive demo app, not indexable marketing content.
+  robots: { index: false, follow: false },
 };
 
 export default function DashboardLayout({

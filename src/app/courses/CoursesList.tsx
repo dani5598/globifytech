@@ -73,7 +73,7 @@ export function CoursesList() {
           <SectionTag>All Programs</SectionTag>
         </Reveal>
         <Reveal delay={0.08}>
-          <h1 className="max-w-3xl font-heading text-4xl font-medium leading-[1.1] tracking-tight text-gradient sm:text-5xl">
+          <h1 className="max-w-3xl font-heading text-4xl font-bold leading-[1.1] tracking-tight text-gradient sm:text-5xl">
             Seven career tracks. One AI-powered institute.
           </h1>
         </Reveal>
@@ -113,7 +113,7 @@ export function CoursesList() {
               key={stat.label}
               className="rounded-2xl border border-white/[0.06] bg-white/[0.02] px-4 py-5 text-center"
             >
-              <p className="font-heading text-2xl font-medium text-white sm:text-3xl">
+              <p className="font-heading text-2xl font-bold text-white sm:text-3xl">
                 {stat.value}
                 {stat.suffix}
               </p>
@@ -185,7 +185,7 @@ export function CoursesList() {
 
                 <div className="flex flex-1 flex-col p-7">
                   <div className="flex items-start justify-between">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-gradient-to-br from-[#009DFF]/25 to-transparent font-heading text-sm font-semibold text-[#7FD3FF]">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-gradient-to-br from-[#009DFF]/25 to-transparent font-heading text-sm font-bold text-[#7FD3FF]">
                       {program.icon}
                     </div>
                     <span className="rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 text-[11px] font-medium uppercase tracking-wide text-[#7FD3FF]">
@@ -193,7 +193,7 @@ export function CoursesList() {
                     </span>
                   </div>
 
-                  <h2 className="mt-6 font-heading text-xl font-medium tracking-tight text-white">
+                  <h2 className="mt-6 font-heading text-xl font-bold tracking-tight text-white">
                     {program.title}
                   </h2>
                   <p className="mt-3 text-sm leading-relaxed text-[#A0AEC0]">

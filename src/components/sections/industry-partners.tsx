@@ -15,7 +15,7 @@ export function IndustryPartners() {
         <div className="mt-16 grid grid-cols-2 gap-4 sm:grid-cols-4">
           {partners.map((name, i) => (
             <Reveal key={name} delay={i * 0.05}>
-              <div className="glass flex h-24 items-center justify-center rounded-2xl px-4 text-center font-heading text-base font-medium text-white/60 transition-colors hover:text-white sm:text-lg">
+              <div className="glass flex h-24 items-center justify-center rounded-2xl px-4 text-center font-heading text-base font-bold text-white/60 transition-colors hover:text-white sm:text-lg">
                 {name}
               </div>
             </Reveal>

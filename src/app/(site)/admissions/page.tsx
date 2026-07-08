@@ -20,6 +20,7 @@ export const metadata: Metadata = {
   title: "Admissions",
   description:
     "How to apply to Globify Tech Institute — a simple four-step admissions process, entry requirements, tuition options, scholarships and upcoming cohort dates across all seven programs.",
+  alternates: { canonical: "/admissions" },
 };
 
 const STEPS = [
@@ -123,11 +124,11 @@ export default function AdmissionsPage() {
                   <span className="flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.03] text-[#009DFF]">
                     <s.icon size={20} />
                   </span>
-                  <span className="font-heading text-2xl font-medium text-gradient-blue">
+                  <span className="font-heading text-2xl font-bold text-gradient-blue">
                     {s.step}
                   </span>
                 </div>
-                <h3 className="font-heading text-base font-medium text-[color:var(--fg)]">
+                <h3 className="font-heading text-base font-bold text-[color:var(--fg)]">
                   {s.title}
                 </h3>
                 <p className="text-sm leading-relaxed text-[color:var(--muted)]">
@@ -175,7 +176,7 @@ export default function AdmissionsPage() {
                     <t.icon size={20} />
                   </span>
                   <div>
-                    <h3 className="font-heading text-base font-medium text-[color:var(--fg)]">
+                    <h3 className="font-heading text-base font-bold text-[color:var(--fg)]">
                       {t.title}
                     </h3>
                     <p className="mt-1.5 text-sm leading-relaxed text-[color:var(--muted)]">
@@ -234,7 +235,7 @@ export default function AdmissionsPage() {
       {/* CTA */}
       <Reveal delay={0.1}>
         <div className="mt-28 overflow-hidden rounded-3xl border border-[color:var(--border)] bg-gradient-to-br from-[#009DFF]/10 via-transparent to-[#452054]/20 p-10 text-center sm:p-16">
-          <h2 className="mx-auto max-w-2xl font-heading text-3xl font-medium tracking-tight text-gradient sm:text-4xl">
+          <h2 className="mx-auto max-w-2xl font-heading text-3xl font-bold tracking-tight text-gradient sm:text-4xl">
             Seats fill fast — start your application today
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-[color:var(--muted)]">

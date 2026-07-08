@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   title: "Success Stories",
   description:
     "Real outcomes from Globify Tech Institute graduates — career switchers, freelancers and agency founders who turned our AI-powered programs into jobs, clients and businesses.",
+  alternates: { canonical: "/success-stories" },
 };
 
 const OUTCOME_STATS = [
@@ -111,7 +112,7 @@ export default function SuccessStoriesPage() {
               <span className="flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/[0.03] text-[#009DFF]">
                 <stat.icon size={18} />
               </span>
-              <p className="font-heading text-2xl font-medium text-[color:var(--fg)] sm:text-3xl">
+              <p className="font-heading text-2xl font-bold text-[color:var(--fg)] sm:text-3xl">
                 {stat.value}
               </p>
               <p className="text-xs text-[color:var(--muted)]">{stat.label}</p>
@@ -126,11 +127,11 @@ export default function SuccessStoriesPage() {
           <GlassCard className="grid grid-cols-1 gap-8 p-9 sm:p-12 lg:grid-cols-[1.5fr_1fr]">
             <div>
               <Quote size={30} className="text-[#009DFF]" />
-              <p className="mt-6 text-balance font-heading text-xl font-medium leading-relaxed text-[color:var(--fg)] sm:text-2xl">
+              <p className="mt-6 text-balance font-heading text-xl font-bold leading-relaxed text-[color:var(--fg)] sm:text-2xl">
                 &ldquo;{FEATURED.quote}&rdquo;
               </p>
               <div className="mt-8 flex items-center gap-4">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-gradient-to-br from-[#009DFF]/30 to-transparent font-heading text-base font-medium text-[#7FD3FF]">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-gradient-to-br from-[#009DFF]/30 to-transparent font-heading text-base font-bold text-[#7FD3FF]">
                   {FEATURED.name
                     .split(" ")
                     .map((n) => n[0])
@@ -149,7 +150,7 @@ export default function SuccessStoriesPage() {
                 <p className="text-xs font-medium uppercase tracking-wide text-[color:var(--muted)]">
                   Program
                 </p>
-                <p className="mt-1 font-heading text-base font-medium text-[color:var(--fg)]">
+                <p className="mt-1 font-heading text-base font-bold text-[color:var(--fg)]">
                   {FEATURED.program}
                 </p>
               </div>
@@ -157,7 +158,7 @@ export default function SuccessStoriesPage() {
                 <p className="text-xs font-medium uppercase tracking-wide text-[color:var(--muted)]">
                   Outcome
                 </p>
-                <p className="mt-1 inline-flex items-center gap-2 font-heading text-base font-medium text-[#7FD3FF]">
+                <p className="mt-1 inline-flex items-center gap-2 font-heading text-base font-bold text-[#7FD3FF]">
                   <TrendingUp size={16} />
                   {FEATURED.metric}
                 </p>
@@ -186,7 +187,7 @@ export default function SuccessStoriesPage() {
                   &ldquo;{story.quote}&rdquo;
                 </p>
                 <div className="mt-6 flex items-center gap-3 border-t border-white/[0.06] pt-5">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-gradient-to-br from-[#009DFF]/30 to-transparent font-heading text-sm font-medium text-[#7FD3FF]">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-gradient-to-br from-[#009DFF]/30 to-transparent font-heading text-sm font-bold text-[#7FD3FF]">
                     {story.name
                       .split(" ")
                       .map((n) => n[0])
@@ -206,7 +207,7 @@ export default function SuccessStoriesPage() {
       {/* CTA */}
       <Reveal delay={0.1}>
         <div className="mt-28 overflow-hidden rounded-3xl border border-[color:var(--border)] bg-gradient-to-br from-[#009DFF]/10 via-transparent to-[#452054]/20 p-10 text-center sm:p-16">
-          <h2 className="mx-auto max-w-2xl font-heading text-3xl font-medium tracking-tight text-gradient sm:text-4xl">
+          <h2 className="mx-auto max-w-2xl font-heading text-3xl font-bold tracking-tight text-gradient sm:text-4xl">
             Your success story starts with one cohort
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-[color:var(--muted)]">

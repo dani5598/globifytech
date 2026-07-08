@@ -19,6 +19,7 @@ export const metadata: Metadata = {
   title: "Student Dashboard",
   description:
     "Your Globify Tech Institute student portal — track course progress, join live sessions, submit assignments, message mentors, and download certificates all in one place.",
+  alternates: { canonical: "/student-dashboard" },
 };
 
 const FEATURES = [
@@ -103,7 +104,7 @@ export default function StudentDashboardPage() {
                 <span className="flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.03] text-[#009DFF]">
                   <feature.icon size={20} />
                 </span>
-                <h3 className="font-heading text-lg font-medium text-[color:var(--fg)]">
+                <h3 className="font-heading text-lg font-bold text-[color:var(--fg)]">
                   {feature.title}
                 </h3>
                 <p className="text-sm leading-relaxed text-[color:var(--muted)]">
@@ -118,7 +119,7 @@ export default function StudentDashboardPage() {
       {/* CTA */}
       <Reveal delay={0.1}>
         <div className="mt-28 overflow-hidden rounded-3xl border border-[color:var(--border)] bg-gradient-to-br from-[#009DFF]/10 via-transparent to-[#452054]/20 p-10 text-center sm:p-16">
-          <h2 className="mx-auto max-w-2xl font-heading text-3xl font-medium tracking-tight text-gradient sm:text-4xl">
+          <h2 className="mx-auto max-w-2xl font-heading text-3xl font-bold tracking-tight text-gradient sm:text-4xl">
             Your dashboard is one enrollment away
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-[color:var(--muted)]">

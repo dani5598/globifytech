@@ -12,7 +12,7 @@ export function Logo({ className }: { className?: string }) {
         priority
         className="shrink-0 object-contain"
       />
-      <span className="font-heading text-lg font-semibold tracking-tight text-[color:var(--fg)]">
+      <span className="font-heading text-lg font-bold tracking-tight text-[color:var(--fg)]">
         Globify <span className="text-[#009DFF]">Tech</span>
       </span>
     </div>

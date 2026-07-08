@@ -7,6 +7,7 @@ import { SectionHeading } from "@/components/ui/section-heading";
 import { GlassCard } from "@/components/ui/glass-card";
 import { Reveal } from "@/components/ui/reveal";
 import { LiquidGlassButton } from "@/components/ui/liquid-glass-button";
+import { CourseIcon3D, PROGRAM_ICON_VARIANT } from "@/components/ui/course-icon";
 import { programs } from "@/data/content";
 
 export function FeaturedPrograms() {
@@ -95,20 +96,21 @@ export function FeaturedPrograms() {
               <div
                 key={program.slug}
                 data-card
-                className="w-[85vw] shrink-0 snap-start sm:w-[380px]"
+                className="group w-[85vw] shrink-0 snap-start sm:w-[380px]"
               >
                 <GlassCard className="flex h-full flex-col">
                   <div className="flex flex-1 flex-col p-7">
                     <div className="flex items-start justify-between">
-                      <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-gradient-to-br from-[#009DFF]/25 to-transparent font-heading text-sm font-semibold text-[#7FD3FF]">
-                        {program.icon}
-                      </div>
+                      <CourseIcon3D
+                        variant={PROGRAM_ICON_VARIANT[program.icon]}
+                        size={48}
+                      />
                       <span className="rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 text-[11px] font-medium uppercase tracking-wide text-[#7FD3FF]">
                         {program.tag}
                       </span>
                     </div>
 
-                    <h3 className="mt-6 font-heading text-xl font-medium tracking-tight text-white">
+                    <h3 className="mt-6 font-heading text-xl font-bold tracking-tight text-white">
                       {program.title}
                     </h3>
                     <p className="mt-3 text-sm leading-relaxed text-[#A0AEC0]">

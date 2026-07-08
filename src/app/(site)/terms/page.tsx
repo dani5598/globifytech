@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "Terms & Conditions",
   description:
     "The terms and conditions governing your use of the Globify Tech Institute website, programs, enrollment, payments and student services.",
+  alternates: { canonical: "/terms" },
 };
 
 const LAST_UPDATED = "July 1, 2026";
@@ -87,7 +88,7 @@ const SECTIONS: LegalSection[] = [
   {
     heading: "Contact Us",
     paragraphs: [
-      "Questions about these Terms? Email us at hello@globifytech.com or reach out through our contact page and we'll be glad to help.",
+      "Questions about these Terms? Email us at info@globifytech.com or reach out through our contact page and we'll be glad to help.",
     ],
   },
 ];

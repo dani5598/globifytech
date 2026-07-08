@@ -148,17 +148,18 @@ export function MobileMenu({
         </LiquidGlassButton>
 
         <div className="flex flex-col gap-2 text-sm text-[color:var(--muted)]">
-          <a href="tel:+10000000000" className="flex items-center gap-2.5">
+          <a href="tel:+923391110171" className="flex items-center gap-2.5">
             <Phone size={15} className="shrink-0 text-[#009DFF]" />
-            +1 (000) 000-0000
+            +92 339 1110171
           </a>
-          <a href="mailto:hello@globifytech.com" className="flex items-center gap-2.5">
+          <a href="mailto:info@globifytech.com" className="flex items-center gap-2.5">
             <Mail size={15} className="shrink-0 text-[#009DFF]" />
-            hello@globifytech.com
+            info@globifytech.com
           </a>
-          <span className="flex items-center gap-2.5">
-            <MapPin size={15} className="shrink-0 text-[#009DFF]" />
-            Remote-first, global faculty
+          <span className="flex items-start gap-2.5">
+            <MapPin size={15} className="mt-0.5 shrink-0 text-[#009DFF]" />
+            Office no 1, 1st floor, Rafaqat Ali Plaza, Main Chen One Rd, Pilot
+            Ground Block B People&apos;s Colony No 1, Faisalabad, 38000
           </span>
         </div>
 

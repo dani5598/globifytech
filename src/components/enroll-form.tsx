@@ -5,6 +5,7 @@ import { CheckCircle2 } from "lucide-react";
 import { useSearchParams } from "next/navigation";
 import { GlassCard } from "@/components/ui/glass-card";
 import { LiquidGlassButton } from "@/components/ui/liquid-glass-button";
+import { openWhatsApp, WHATSAPP_DISPLAY } from "@/lib/whatsapp";
 import type { programs } from "@/data/content";
 
 type Program = (typeof programs)[number];
@@ -15,12 +16,24 @@ export function EnrollForm({
   programs: readonly Program[];
 }) {
   const [submitted, setSubmitted] = useState(false);
+  const [waUrl, setWaUrl] = useState<string | null>(null);
   const searchParams = useSearchParams();
   const courseParam = searchParams.get("course");
   const initialSlug = courseParam && programs.some((p) => p.slug === courseParam) ? courseParam : undefined;
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const data = new FormData(e.currentTarget);
+    const slug = String(data.get("program") ?? "");
+    const program = programs.find((p) => p.slug === slug)?.title ?? slug;
+    const url = openWhatsApp("New enrollment application — globifytech.com", [
+      ["Name", String(data.get("name") ?? "")],
+      ["Email", String(data.get("email") ?? "")],
+      ["Phone", String(data.get("phone") ?? "")],
+      ["Program", program],
+      ["Message", String(data.get("message") ?? "")],
+    ]);
+    setWaUrl(url);
     setSubmitted(true);
   };
 
@@ -31,13 +44,19 @@ export function EnrollForm({
           <div className="flex h-14 w-14 items-center justify-center rounded-full border border-white/10 bg-[#009DFF]/20 text-[#7FD3FF]">
             <CheckCircle2 size={22} />
           </div>
-          <h3 className="font-heading text-xl font-medium text-white">
-            Application received
+          <h3 className="font-heading text-xl font-bold text-white">
+            Continue on WhatsApp
           </h3>
           <p className="max-w-xs text-sm text-[#A0AEC0]">
-            An admissions advisor will reach out within one business day to
-            confirm your seat and cohort start date.
+            We&apos;ve opened WhatsApp with your application pre-filled — just tap
+            send and an admissions advisor will confirm your seat. If nothing
+            opened, message us at {WHATSAPP_DISPLAY}.
           </p>
+          {waUrl && (
+            <LiquidGlassButton href={waUrl} className="mt-2">
+              Open WhatsApp
+            </LiquidGlassButton>
+          )}
         </div>
       ) : (
         <form onSubmit={handleSubmit} className="flex flex-col gap-5">
@@ -68,7 +87,7 @@ export function EnrollForm({
               name="program"
               required
               defaultValue={initialSlug ?? ""}
-              className="w-full rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 text-sm text-white outline-none transition-colors focus:border-[#009DFF]/50"
+              className="w-full rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 text-sm text-white outline-none transition-colors focus:border-[#009DFF]/50 [&>option]:bg-[color:var(--surface)] [&>option]:text-[color:var(--fg)]"
             >
               <option value="" disabled>
                 Select a program

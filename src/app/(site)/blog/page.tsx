@@ -23,6 +23,7 @@ export const metadata: Metadata = {
   title: "Blogs & Resources",
   description:
     "Guides, tutorials and free resources on AI, digital marketing, web development, design and freelancing from the Globify Tech Institute faculty and community.",
+  alternates: { canonical: "/blog" },
 };
 
 const CATEGORIES = ["All", "AI & Tools", "Marketing", "Development", "Design", "E-Commerce"];
@@ -178,7 +179,7 @@ export default function BlogPage() {
               </span>
             </div>
             <div className="flex flex-col justify-center p-8 sm:p-10">
-              <h2 className="font-heading text-2xl font-medium tracking-tight text-[color:var(--fg)] sm:text-3xl">
+              <h2 className="font-heading text-2xl font-bold tracking-tight text-[color:var(--fg)] sm:text-3xl">
                 {FEATURED.title}
               </h2>
               <p className="mt-4 text-base leading-relaxed text-[color:var(--muted)]">
@@ -211,7 +212,7 @@ export default function BlogPage() {
             <GlassCard className="flex h-full flex-col overflow-hidden" glow={false}>
               <CategoryHeader icon={post.icon} category={post.category} />
               <div className="flex flex-1 flex-col p-7">
-                <h3 className="font-heading text-lg font-medium leading-snug text-[color:var(--fg)]">
+                <h3 className="font-heading text-lg font-bold leading-snug text-[color:var(--fg)]">
                   {post.title}
                 </h3>
                 <p className="mt-3 flex-1 text-sm leading-relaxed text-[color:var(--muted)]">
@@ -246,7 +247,7 @@ export default function BlogPage() {
                 <span className="flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.03] text-[#009DFF]">
                   <res.icon size={20} />
                 </span>
-                <h3 className="font-heading text-lg font-medium text-[color:var(--fg)]">
+                <h3 className="font-heading text-lg font-bold text-[color:var(--fg)]">
                   {res.title}
                 </h3>
                 <p className="text-sm leading-relaxed text-[color:var(--muted)]">
@@ -271,7 +272,7 @@ export default function BlogPage() {
           <span className="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.03] text-[#009DFF]">
             <Rss size={20} />
           </span>
-          <h2 className="mx-auto mt-6 max-w-2xl font-heading text-3xl font-medium tracking-tight text-gradient sm:text-4xl">
+          <h2 className="mx-auto mt-6 max-w-2xl font-heading text-3xl font-bold tracking-tight text-gradient sm:text-4xl">
             Never miss a new guide
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-[color:var(--muted)]">

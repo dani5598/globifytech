@@ -18,7 +18,7 @@ export function Newsletter() {
       <div className="mx-auto max-w-5xl px-6 lg:px-10">
         <Reveal>
           <div className="flex flex-col items-center justify-between gap-6 rounded-3xl border border-white/[0.08] bg-white/[0.02] px-8 py-10 sm:flex-row sm:px-12">
-            <h3 className="font-heading text-xl font-medium text-white sm:text-2xl">
+            <h3 className="font-heading text-xl font-bold text-white sm:text-2xl">
               Subscribe to our newsletter
             </h3>
 

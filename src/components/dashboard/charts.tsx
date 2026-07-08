@@ -286,7 +286,7 @@ export function RadialGauge({
         />
       </svg>
       <div className="absolute inset-0 flex flex-col items-center justify-center">
-        <span className="font-heading text-3xl font-semibold text-[color:var(--fg)]">
+        <span className="font-heading text-3xl font-bold text-[color:var(--fg)]">
           {value}%
         </span>
         <span className="text-xs text-[color:var(--muted)]">{label}</span>
@@ -341,7 +341,7 @@ export function DonutChart({
           ))}
         </svg>
         <div className="absolute inset-0 flex flex-col items-center justify-center">
-          <span className="font-heading text-2xl font-semibold text-[color:var(--fg)]">
+          <span className="font-heading text-2xl font-bold text-[color:var(--fg)]">
             {total}
           </span>
           <span className="text-[10px] text-[color:var(--muted)]">courses</span>

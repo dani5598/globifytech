@@ -108,7 +108,7 @@ export function Sidebar({
               <Flame size={20} className="drop-shadow-[0_0_8px_rgba(255,120,0,0.8)]" />
             </span>
             <div className="min-w-0">
-              <p className="font-heading text-sm font-medium text-[color:var(--fg)]">
+              <p className="font-heading text-sm font-bold text-[color:var(--fg)]">
                 {STUDENT.streak}-day streak 🔥
               </p>
               <p className="truncate text-xs text-[color:var(--muted)]">

@@ -82,7 +82,7 @@ export function DashboardSection({
             </span>
           )}
           <div>
-            <h2 className="font-heading text-xl font-medium tracking-tight text-[color:var(--fg)] sm:text-2xl">
+            <h2 className="font-heading text-xl font-bold tracking-tight text-[color:var(--fg)] sm:text-2xl">
               {title}
             </h2>
             {description && (
@@ -409,7 +409,7 @@ export function Avatar({
     <span className={cn("relative inline-flex shrink-0", className)}>
       <span
         className={cn(
-          "flex items-center justify-center rounded-full font-heading font-medium text-white",
+          "flex items-center justify-center rounded-full font-heading font-bold text-white",
           ring && "ring-2 ring-white/20"
         )}
         style={{

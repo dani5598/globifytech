@@ -53,7 +53,7 @@ export function CareerSupport() {
               variants={staggerItem}
               className="glass rounded-2xl px-6 py-8 text-center"
             >
-              <div className="font-heading text-3xl font-semibold text-gradient-blue sm:text-4xl">
+              <div className="font-heading text-3xl font-bold text-gradient-blue sm:text-4xl">
                 {stat.value}
               </div>
               <div className="mt-2 text-xs uppercase tracking-wide text-[color:var(--muted)]">
@@ -68,7 +68,7 @@ export function CareerSupport() {
             <Reveal key={step.title} delay={i * 0.06}>
               <GlassCard className="h-full p-6" glow={false}>
                 <step.icon size={20} className="text-[#009DFF]" />
-                <h3 className="mt-5 font-heading text-base font-medium text-[color:var(--fg)]">
+                <h3 className="mt-5 font-heading text-base font-bold text-[color:var(--fg)]">
                   {step.title}
                 </h3>
                 <p className="mt-2 text-sm leading-relaxed text-[color:var(--muted)]">

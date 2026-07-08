@@ -40,7 +40,7 @@ export function OverviewSection() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.05 }}
-              className="mt-4 font-heading text-3xl font-semibold leading-[1.1] tracking-tight text-[color:var(--fg)] sm:text-4xl lg:text-5xl"
+              className="mt-4 font-heading text-3xl font-bold leading-[1.1] tracking-tight text-[color:var(--fg)] sm:text-4xl lg:text-5xl"
             >
               Welcome Back!
             </motion.h1>
@@ -94,7 +94,7 @@ export function OverviewSection() {
                   <TrendingUp size={12} />
                 </span>
               </div>
-              <p className="mt-4 font-heading text-3xl font-semibold text-[color:var(--fg)] sm:text-4xl">
+              <p className="mt-4 font-heading text-3xl font-bold text-[color:var(--fg)] sm:text-4xl">
                 <AnimatedNumber value={stat.value} suffix={stat.suffix} />
               </p>
               <p className="mt-1 text-sm text-[color:var(--muted)]">{stat.label}</p>

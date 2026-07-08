@@ -6,7 +6,6 @@ import { TrustedBy } from "@/components/sections/trusted-by";
 import { CourseCategories } from "@/components/sections/course-categories";
 import { FeaturedPrograms } from "@/components/sections/featured-programs";
 import { LearningExperience } from "@/components/sections/learning-experience";
-import { AiLabs } from "@/components/sections/ai-labs";
 import { CareerSupport } from "@/components/sections/career-support";
 import { LegacyStats } from "@/components/sections/legacy-stats";
 import { SuccessStories } from "@/components/sections/success-stories";
@@ -30,7 +29,6 @@ export default function Home() {
         <CourseCategories />
         <FeaturedPrograms />
         <LearningExperience />
-        <AiLabs />
         <CareerSupport />
         <LegacyStats />
         <SuccessStories />

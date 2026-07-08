@@ -47,7 +47,7 @@ export function LearningExperience() {
               <Reveal key={feature.title} delay={i * 0.08}>
                 <GlassCard className="h-full p-6">
                   <feature.icon size={22} className="text-[#009DFF]" />
-                  <h3 className="mt-5 font-heading text-lg font-medium text-white">
+                  <h3 className="mt-5 font-heading text-lg font-bold text-white">
                     {feature.title}
                   </h3>
                   <p className="mt-2.5 text-sm leading-relaxed text-[#A0AEC0]">

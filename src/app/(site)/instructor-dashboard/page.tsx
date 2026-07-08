@@ -19,6 +19,7 @@ export const metadata: Metadata = {
   title: "Instructor Dashboard",
   description:
     "The Globify Tech Institute instructor portal — run live classes, track cohort progress, review submissions, message students and manage your teaching all in one workspace.",
+  alternates: { canonical: "/instructor-dashboard" },
 };
 
 const FEATURES = [
@@ -105,7 +106,7 @@ export default function InstructorDashboardPage() {
                 <span className="flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.03] text-[#009DFF]">
                   <feature.icon size={20} />
                 </span>
-                <h3 className="font-heading text-lg font-medium text-[color:var(--fg)]">
+                <h3 className="font-heading text-lg font-bold text-[color:var(--fg)]">
                   {feature.title}
                 </h3>
                 <p className="text-sm leading-relaxed text-[color:var(--muted)]">
@@ -122,7 +123,7 @@ export default function InstructorDashboardPage() {
         <div className="mt-28 overflow-hidden rounded-3xl border border-[color:var(--border)] bg-gradient-to-br from-[#009DFF]/10 via-transparent to-[#452054]/20 p-10 sm:p-14">
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1.1fr_1fr] lg:items-center">
             <div>
-              <h2 className="font-heading text-3xl font-medium tracking-tight text-gradient sm:text-4xl">
+              <h2 className="font-heading text-3xl font-bold tracking-tight text-gradient sm:text-4xl">
                 Teach with Globify Tech
               </h2>
               <p className="mt-4 text-base leading-relaxed text-[color:var(--muted)]">

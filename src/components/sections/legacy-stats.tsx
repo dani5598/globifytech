@@ -28,7 +28,7 @@ export function LegacyStats() {
                 <Counter
                   value={stat.value}
                   suffix={stat.suffix}
-                  className="font-heading text-3xl font-medium text-white sm:text-4xl"
+                  className="font-heading text-3xl font-bold text-white sm:text-4xl"
                 />
                 <span className="text-xs uppercase tracking-wide text-[#A0AEC0]">
                   {stat.label}

@@ -62,7 +62,7 @@ export function StudentDashboardPreview() {
       {/* Top bar */}
       <div className="flex items-center justify-between gap-4 border-b border-[color:var(--border)] px-6 py-5">
         <div className="flex items-center gap-3">
-          <div className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-gradient-to-br from-[#009DFF]/30 to-transparent font-heading text-sm font-medium text-[#7FD3FF]">
+          <div className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-gradient-to-br from-[#009DFF]/30 to-transparent font-heading text-sm font-bold text-[#7FD3FF]">
             SI
           </div>
           <div>
@@ -84,7 +84,7 @@ export function StudentDashboardPreview() {
       <div className="grid grid-cols-2 gap-px border-b border-[color:var(--border)] bg-[color:var(--border)] sm:grid-cols-4">
         {STATS.map((stat) => (
           <div key={stat.label} className="bg-[color:var(--surface)] px-5 py-4">
-            <p className="font-heading text-2xl font-medium text-[color:var(--fg)]">{stat.value}</p>
+            <p className="font-heading text-2xl font-bold text-[color:var(--fg)]">{stat.value}</p>
             <p className="mt-0.5 text-xs text-[color:var(--muted)]">{stat.label}</p>
           </div>
         ))}
@@ -126,7 +126,7 @@ export function StudentDashboardPreview() {
                 </p>
                 <div className="mt-3 flex items-center justify-between gap-4">
                   <div>
-                    <p className="font-heading text-base font-medium text-[color:var(--fg)]">
+                    <p className="font-heading text-base font-bold text-[color:var(--fg)]">
                       Digital Marketing with AI
                     </p>
                     <p className="mt-0.5 text-sm text-[color:var(--muted)]">
@@ -194,7 +194,7 @@ export function StudentDashboardPreview() {
                 <span className="flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-[#009DFF]/10 text-[#7FD3FF]">
                   <BookOpen size={18} />
                 </span>
-                <p className="font-heading text-sm font-medium text-[color:var(--fg)]">{c.title}</p>
+                <p className="font-heading text-sm font-bold text-[color:var(--fg)]">{c.title}</p>
                 <p className="text-xs text-[color:var(--muted)]">Next: {c.next}</p>
                 <div className="mt-1 h-2 overflow-hidden rounded-full bg-[color:var(--surface)]">
                   <div

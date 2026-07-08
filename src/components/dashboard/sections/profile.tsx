@@ -37,7 +37,7 @@ export function ProfileSection() {
                 <PencilLine size={13} /> Edit
               </GradientButton>
             </div>
-            <h3 className="mt-4 font-heading text-lg font-semibold text-[color:var(--fg)]">
+            <h3 className="mt-4 font-heading text-lg font-bold text-[color:var(--fg)]">
               {STUDENT.name}
             </h3>
             <p className="text-sm text-[#7FD3FF]">{STUDENT.level}</p>
@@ -59,7 +59,7 @@ export function ProfileSection() {
                 <Flame size={20} />
               </span>
               <div>
-                <p className="font-heading text-lg font-semibold text-[color:var(--fg)]">
+                <p className="font-heading text-lg font-bold text-[color:var(--fg)]">
                   {STUDENT.streak} days
                 </p>
                 <p className="text-xs text-[color:var(--muted)]">Current learning streak</p>

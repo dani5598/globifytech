@@ -21,6 +21,7 @@ export const metadata: Metadata = {
   title: "About Us",
   description:
     "Globify Tech Institute is a future-ready AI and technology education brand training the designers, developers, marketers and analysts of tomorrow through practical, industry-focused programs.",
+  alternates: { canonical: "/about" },
 };
 
 const VALUES = [
@@ -116,7 +117,7 @@ export default function AboutPage() {
               key={stat.label}
               className="rounded-2xl border border-[color:var(--border)] bg-[color:var(--surface-soft)] px-4 py-6 text-center"
             >
-              <p className="font-heading text-2xl font-medium text-[color:var(--fg)] sm:text-3xl">
+              <p className="font-heading text-2xl font-bold text-[color:var(--fg)] sm:text-3xl">
                 {stat.value}
                 {stat.suffix}
               </p>
@@ -134,7 +135,7 @@ export default function AboutPage() {
               <span className="flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-gradient-to-br from-[#009DFF]/25 to-transparent text-[#7FD3FF]">
                 <item.icon size={22} />
               </span>
-              <h2 className="font-heading text-2xl font-medium tracking-tight text-[color:var(--fg)]">
+              <h2 className="font-heading text-2xl font-bold tracking-tight text-[color:var(--fg)]">
                 {item.title}
               </h2>
               <p className="text-base leading-relaxed text-[color:var(--muted)]">
@@ -160,7 +161,7 @@ export default function AboutPage() {
                   <value.icon size={20} />
                 </span>
                 <div>
-                  <h3 className="font-heading text-lg font-medium text-[color:var(--fg)]">
+                  <h3 className="font-heading text-lg font-bold text-[color:var(--fg)]">
                     {value.title}
                   </h3>
                   <p className="mt-2 text-sm leading-relaxed text-[color:var(--muted)]">
@@ -184,10 +185,10 @@ export default function AboutPage() {
           {MILESTONES.map((m, i) => (
             <Reveal key={m.year} delay={i * 0.08}>
               <div className="relative h-full rounded-3xl border border-[color:var(--border)] bg-[color:var(--surface-soft)] p-7">
-                <span className="font-heading text-3xl font-medium text-gradient-blue">
+                <span className="font-heading text-3xl font-bold text-gradient-blue">
                   {m.year}
                 </span>
-                <h3 className="mt-4 font-heading text-base font-medium text-[color:var(--fg)]">
+                <h3 className="mt-4 font-heading text-base font-bold text-[color:var(--fg)]">
                   {m.title}
                 </h3>
                 <p className="mt-2 text-sm leading-relaxed text-[color:var(--muted)]">
@@ -210,14 +211,14 @@ export default function AboutPage() {
           {instructors.map((person, i) => (
             <Reveal key={person.name} delay={i * 0.07}>
               <GlassCard className="flex h-full items-start gap-5 p-8" glow={false}>
-                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border border-white/10 bg-gradient-to-br from-[#009DFF]/30 to-transparent font-heading text-base font-medium text-[#7FD3FF]">
+                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border border-white/10 bg-gradient-to-br from-[#009DFF]/30 to-transparent font-heading text-base font-bold text-[#7FD3FF]">
                   {person.name
                     .split(" ")
                     .map((n) => n[0])
                     .join("")}
                 </div>
                 <div>
-                  <h3 className="font-heading text-lg font-medium text-[color:var(--fg)]">
+                  <h3 className="font-heading text-lg font-bold text-[color:var(--fg)]">
                     {person.name}
                   </h3>
                   <p className="text-sm text-[#7FD3FF]">{person.role}</p>
@@ -243,7 +244,7 @@ export default function AboutPage() {
             {partners.map((partner) => (
               <div
                 key={partner}
-                className="flex items-center justify-center rounded-2xl border border-[color:var(--border)] bg-[color:var(--surface-soft)] px-4 py-6 text-center font-heading text-sm font-medium text-[color:var(--muted)]"
+                className="flex items-center justify-center rounded-2xl border border-[color:var(--border)] bg-[color:var(--surface-soft)] px-4 py-6 text-center font-heading text-sm font-bold text-[color:var(--muted)]"
               >
                 {partner}
               </div>
@@ -255,7 +256,7 @@ export default function AboutPage() {
       {/* CTA */}
       <Reveal delay={0.1}>
         <div className="mt-28 overflow-hidden rounded-3xl border border-[color:var(--border)] bg-gradient-to-br from-[#009DFF]/10 via-transparent to-[#452054]/20 p-10 text-center sm:p-16">
-          <h2 className="mx-auto max-w-2xl font-heading text-3xl font-medium tracking-tight text-gradient sm:text-4xl">
+          <h2 className="mx-auto max-w-2xl font-heading text-3xl font-bold tracking-tight text-gradient sm:text-4xl">
             Ready to start building your future?
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-[color:var(--muted)]">

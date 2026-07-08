@@ -8,6 +8,8 @@ import { GlassCard } from "@/components/ui/glass-card";
 import { Reveal } from "@/components/ui/reveal";
 import { LiquidGlassButton } from "@/components/ui/liquid-glass-button";
 import { programs, instructors } from "@/data/content";
+import { JsonLd } from "@/components/seo/json-ld";
+import { courseSchema, breadcrumbSchema } from "@/lib/seo";
 
 type Params = { slug: string };
 
@@ -34,9 +36,15 @@ export async function generateMetadata({
   return {
     title: program.title,
     description: program.description,
+    alternates: {
+      canonical: `/courses/${program.slug}`,
+    },
     openGraph: {
       title: `${program.title} | Globify Tech Institute`,
       description: program.description,
+      url: `/courses/${program.slug}`,
+      type: "website",
+      images: [{ url: program.image, alt: program.title }],
     },
   };
 }
@@ -58,6 +66,15 @@ export default async function CourseDetailPage({
 
   return (
     <div className="mx-auto max-w-5xl px-6 pb-28 lg:px-10">
+      <JsonLd
+        schema={[
+          courseSchema(program),
+          breadcrumbSchema([
+            { name: "Courses", path: "/courses" },
+            { name: program.title, path: `/courses/${program.slug}` },
+          ]),
+        ]}
+      />
       <Reveal>
         <Link
           href="/courses"
@@ -73,7 +90,7 @@ export default async function CourseDetailPage({
           <SectionTag>{program.tag}</SectionTag>
         </Reveal>
         <Reveal delay={0.08}>
-          <h1 className="max-w-3xl font-heading text-4xl font-medium leading-[1.1] tracking-tight text-gradient sm:text-5xl">
+          <h1 className="max-w-3xl font-heading text-4xl font-bold leading-[1.1] tracking-tight text-gradient sm:text-5xl">
             {program.title}
           </h1>
         </Reveal>
@@ -118,7 +135,7 @@ export default async function CourseDetailPage({
       <div className="mt-16 grid grid-cols-1 gap-10 lg:grid-cols-[1.3fr_1fr]">
         <div>
           <Reveal>
-            <h2 className="font-heading text-2xl font-medium tracking-tight text-white">
+            <h2 className="font-heading text-2xl font-bold tracking-tight text-white">
               What You&apos;ll Learn
             </h2>
           </Reveal>
@@ -137,7 +154,7 @@ export default async function CourseDetailPage({
         <Reveal delay={0.1}>
           <GlassCard className="flex flex-col gap-6 p-7">
             <div>
-              <h3 className="font-heading text-lg font-medium text-white">
+              <h3 className="font-heading text-lg font-bold text-white">
                 Ready to enroll?
               </h3>
               <p className="mt-2 text-sm leading-relaxed text-[#A0AEC0]">
@@ -155,7 +172,7 @@ export default async function CourseDetailPage({
                 <p className="text-xs font-medium uppercase tracking-wide text-[#A0AEC0]">
                   Your Instructor
                 </p>
-                <p className="mt-2 font-heading text-base font-medium text-white">
+                <p className="mt-2 font-heading text-base font-bold text-white">
                   {instructor.name}
                 </p>
                 <p className="text-sm text-[#7FD3FF]">{instructor.role}</p>

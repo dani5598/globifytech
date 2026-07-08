@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
     "How Globify Tech Institute collects, uses, protects and shares your personal information across our website, programs and student services.",
+  alternates: { canonical: "/privacy-policy" },
 };
 
 const LAST_UPDATED = "July 1, 2026";
@@ -89,7 +90,7 @@ const SECTIONS: LegalSection[] = [
   {
     heading: "Contact Us",
     paragraphs: [
-      "If you have questions about this Privacy Policy or how we handle your data, email us at hello@globifytech.com or reach out through our contact page.",
+      "If you have questions about this Privacy Policy or how we handle your data, email us at info@globifytech.com or reach out through our contact page.",
     ],
   },
 ];

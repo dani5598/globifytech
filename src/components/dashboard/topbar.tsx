@@ -48,7 +48,7 @@ export function Topbar({
 
         {/* Greeting */}
         <div className="min-w-0 flex-1 lg:flex-none">
-          <p className="truncate font-heading text-base font-medium text-[color:var(--fg)] sm:text-lg">
+          <p className="truncate font-heading text-base font-bold text-[color:var(--fg)] sm:text-lg">
             {hello}, <span className="text-gradient-brand">{STUDENT.greetingName}</span> 👋
           </p>
           <p className="hidden text-xs text-[color:var(--muted)] sm:block">
