@@ -34,7 +34,7 @@ export function CertificatesSection() {
                 <div className="absolute inset-0 opacity-30 [background:radial-gradient(circle_at_80%_10%,rgba(255,255,255,0.4),transparent_45%)]" />
                 <div className="relative rounded-xl border border-white/25 bg-black/25 p-4 backdrop-blur-md">
                   <div className="flex items-center justify-between">
-                    <Logo className="[&_span]:text-white [&_img]:brightness-0 [&_img]:invert" />
+                    <Logo variant="onDark" className="[&_img]:brightness-0 [&_img]:invert" />
                     <ShieldCheck size={18} className="text-white/90" />
                   </div>
                   <p className="mt-4 text-[10px] uppercase tracking-[0.2em] text-white/70">

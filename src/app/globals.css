@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+/* Light theme is opt-in via a `.light` class on <html> (see theme-provider).
+   Expose it as a `light:` utility variant so components can swap per theme. */
+@custom-variant light (&:where(.light, .light *));
+
 @theme inline {
   --font-heading: var(--font-heading);
   --font-body: var(--font-body);

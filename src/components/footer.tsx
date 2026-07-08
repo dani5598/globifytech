@@ -51,7 +51,7 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1fr]">
           <div className="flex flex-col gap-4">
-            <Logo />
+            <Logo variant="onDark" />
             <p className="max-w-xs text-sm leading-relaxed text-[#A0AEC0]">
               A future-ready AI and technology institute building the
               engineers, analysts, and builders of tomorrow.

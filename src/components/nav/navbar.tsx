@@ -92,7 +92,7 @@ export function Navbar() {
       >
         {/* Left — logo */}
         <Link href="/#home" data-cursor-hover className="shrink-0 transition-transform duration-300 hover:scale-105">
-          <Logo />
+          <Logo variant="onDark" />
         </Link>
 
         {/* Center — desktop nav */}
